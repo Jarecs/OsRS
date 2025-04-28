@@ -9,6 +9,10 @@ if(oc_param(last_useitem, unlit_arrow) = ^true) { // might not work on every fir
 }
 
 [label,attempt_cook_item](obj $uncooked_item)
+if (getqueue(cooking_repeat) > 0) {
+    clearqueue(cooking_repeat);
+    return;
+}
 //not sure if this is used
 p_arrivedelay();
 // get item data from db

@@ -1,6 +1,10 @@
 [opheldt,magic:superheat_item]@magic_spell_superheat(^superheat_item, last_item);
 
 [label,magic_spell_superheat](int $spell, obj $ore1)
+if (getqueue(superheat_repeat) > 0) {
+    clearqueue(superheat_repeat);
+    return;
+}
 // look for spell in db
 def_dbrow $spell_data = ~get_spell_data($spell);
 if (~check_spell_requirements($spell_data)= false) {
