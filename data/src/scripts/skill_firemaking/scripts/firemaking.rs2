@@ -123,7 +123,7 @@ obj_addall($fire_coord, ashes, 1, 100);
 
 //---queue to repeat firemaking.
 [queue,firemaking_repeat](obj $log)
-if(inv_total(inv, $log) > 0) {
+if(inv_total(inv, $log) > 0 & busy2 = false) {
     def_int $slot = ~inv_find(inv, $log, 0);
     if ($slot >= 0) {
         @light_logs_inv($slot);
