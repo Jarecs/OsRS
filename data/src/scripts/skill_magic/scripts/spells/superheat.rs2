@@ -56,10 +56,21 @@ if ($ore2 ! null) {
     inv_del(inv, $ore2, struct_param($bar_struct, ingredient_secondary_count));
 }
 inv_add(inv, $bar, 1);
-if_settabactive(^tab_magic);
-p_delay(1);
+// if_settabactive(^tab_magic);
+// p_delay(1);
 
 if (afk_event = ^true) {
     ~macro_event_general_spawn(~macro_event_set_random);
     return;
+}
+
+queue(superheat_repeat, 3, $ore1);
+
+//---queue to repeat superheating.
+[queue,superheat_repeat](obj $ore1)
+if(inv_total(inv, $ore1) > 0) {
+    def_int $slot = ~inv_find(inv, $ore1, 0);
+    if ($slot >= 0) {
+        @magic_spell_superheat(^superheat_item, inv_getobj(inv, $slot));
+    }
 }
