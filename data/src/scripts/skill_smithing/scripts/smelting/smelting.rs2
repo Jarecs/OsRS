@@ -19,7 +19,6 @@ switch_obj (last_useitem)
 [label,smelt_ore](obj $last)
 if (getqueue(smelting_repeat) > 0) {
     clearqueue(smelting_repeat);
-    return;
 }
 p_arrivedelay();
 // find the bar that the ore smelts to

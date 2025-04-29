@@ -11,6 +11,9 @@ if (map_members = false) {
     mes(^mes_members_fletching); // guess
     return;
 }
+if (getqueue(fletching_repeat) > 0) {
+    clearqueue(fletching_repeat);
+}
 db_find(fletch_bow_table:log, $log);
 def_dbrow $data = db_findnext;
 if ($data = null) {
@@ -68,3 +71,18 @@ inv_del(inv, $log, 1);
 mes($message);
 stat_advance(fletching, $fletching_experience);
 inv_add(inv, $product, $count);
+queue(fletching_repeat, 2, $log, $product, $count, $message, $fletching_experience);
+
+[queue,fletching_repeat](obj $log, namedobj $product, int $count, string $message, int $fletching_experience)
+if(inv_total(inv, $log) > 0) {
+    def_int $slot = ~inv_find(inv, $log, 0);
+    if ($slot >= 0) {
+        // make one bow at a time
+        inv_del(inv, $log, 1);
+        mes($message);
+        stat_advance(fletching, $fletching_experience);
+        inv_add(inv, $product, $count);
+
+        queue(fletching_repeat, 2, $log, $product, $count, $message, $fletching_experience);
+    }
+}
