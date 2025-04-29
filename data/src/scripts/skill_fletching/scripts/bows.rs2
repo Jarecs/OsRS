@@ -47,7 +47,7 @@ inv_add(inv, db_getfield($data, fletching_table:product, 0));
 queue(string_repeat, 2, $unstrung_bow);
 
 [queue,string_repeat](obj $last)
-if (inv_total(inv, $last) > 0) {
+if (inv_total(inv, $last) > 0 & inv_total(inv, bow_string) > 0) {
     def_int $slot = ~inv_find(inv, $last, 0);
     if ($slot >= 0) {
         @string_bow(inv_getobj(inv, $slot));

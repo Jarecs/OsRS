@@ -52,7 +52,9 @@ inv_add(inv, headless_arrow, $arrow_count);
 queue(make_headless_arrows_repeat, 2);
 
 [queue,make_headless_arrows_repeat]()
-@make_headless_arrows;
+if (inv_total(inv, feather) > 0 & inv_total(inv, arrow_shaft) > 0) {
+    @make_headless_arrows;
+}
 
 [label,make_arrows](obj $arrow_tips)
 if (map_members = false) {
@@ -98,7 +100,7 @@ inv_add(inv, $product, $arrows_count);
 queue(make_arrows_repeat, 2, $arrow_tips);
 
 [queue,make_arrows_repeat](obj $arrow_tips)
-if (inv_total(inv, $arrow_tips) > 0) {
+if (inv_total(inv, $arrow_tips) > 0 & inv_total(inv, headless_arrow) > 0) {
     def_int $slot = ~inv_find(inv, $arrow_tips, 0);
     if ($slot >= 0) {
         @make_arrows(inv_getobj(inv, $slot));
