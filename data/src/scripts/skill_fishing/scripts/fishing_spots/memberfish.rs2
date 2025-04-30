@@ -218,25 +218,67 @@ sound_synth(lever, 0, 0);
 def_int $random = random(128);
 // drop rates are from https://oldschool.runescape.wiki/w/Casket
 // todo: find screenshots for these objbox's
-if ($random < 60) { // 10/128 coins for each
-    // 20, 40, 80, 160, 320, 640
-    inv_add(inv, coins, multiply(pow(2, add(random(6), 1)), 10)); // 2 ^ (random(6) + 1) * 10
-    ~objbox(coins_250, "You open the casket. Inside you find some coins.", 250, 0, divide(^objbox_height, 2));
-} else if ($random < 92) { // 32/128 uncut sapphire
-    inv_add(inv, uncut_sapphire, 1);
-    ~objbox(uncut_sapphire, "You open the casket. Inside you find an uncut|sapphire.", 250, 0, divide(^objbox_height, 2));
-} else if ($random < 108) { // 16/128 uncut emerald
-    inv_add(inv, uncut_emerald, 1);
-    ~objbox(uncut_emerald, "You open the casket. Inside you find an uncut|emerald.", 250, 0, divide(^objbox_height, 2));
-} else if ($random < 116) { // 8/128 uncut ruby
-    inv_add(inv, uncut_ruby, 1);
-    ~objbox(uncut_ruby, "You open the casket. Inside you find an uncut ruby.", 250, 0, divide(^objbox_height, 2));
-} else if ($random < 124) { // 8/128 cosmic talisman
+// if ($random < 60) { // 10/128 coins for each
+//     // 20, 40, 80, 160, 320, 640
+//     inv_add(inv, coins, multiply(pow(2, add(random(6), 1)), 10)); // 2 ^ (random(6) + 1) * 10
+//     ~objbox(coins_250, "You open the casket. Inside you find some coins.", 250, 0, divide(^objbox_height, 2));
+// } else if ($random < 92) { // 32/128 uncut sapphire
+//     inv_add(inv, uncut_sapphire, 1);
+//     ~objbox(uncut_sapphire, "You open the casket. Inside you find an uncut|sapphire.", 250, 0, divide(^objbox_height, 2));
+// } else if ($random < 108) { // 16/128 uncut emerald
+//     inv_add(inv, uncut_emerald, 1);
+//     ~objbox(uncut_emerald, "You open the casket. Inside you find an uncut|emerald.", 250, 0, divide(^objbox_height, 2));
+// } else if ($random < 116) { // 8/128 uncut ruby
+//     inv_add(inv, uncut_ruby, 1);
+//     ~objbox(uncut_ruby, "You open the casket. Inside you find an uncut ruby.", 250, 0, divide(^objbox_height, 2));
+// } else if ($random < 124) { // 8/128 cosmic talisman
+//     inv_add(inv, cosmic_talisman, 1);
+//     ~objbox(cosmic_talisman, "You open the casket. Inside you find a cosmic talisman.", 250, 0, 0);
+// } else if ($random < 126) { // 2/128 uncut diamond
+//     inv_add(inv, uncut_diamond, 1);
+//     ~objbox(uncut_diamond, "You open the casket. Inside you find an uncut|diamond.", 250, 0, divide(^objbox_height, 2));
+if ($random < 8) {
     inv_add(inv, cosmic_talisman, 1);
     ~objbox(cosmic_talisman, "You open the casket. Inside you find a cosmic talisman.", 250, 0, 0);
-} else if ($random < 126) { // 2/128 uncut diamond
-    inv_add(inv, uncut_diamond, 1);
-    ~objbox(uncut_diamond, "You open the casket. Inside you find an uncut|diamond.", 250, 0, divide(^objbox_height, 2));
+} else if ($random < 24) {
+    inv_add(inv, coins, multiply(pow(2, add(random(6), 1)), 1000));
+    ~objbox(coins_250, "You open the casket. Inside you find some coins.", 250, 0, divide(^objbox_height, 2));
+} else if ($random < 40) {
+    inv_add(inv, cert_red_spiders_eggs, ~random_range(5, 30));
+    ~objbox(red_spiders_eggs, "You open the casket. Inside you find some eggs.", 250, 0, divide(^objbox_height, 2));
+} else if ($random < 56) {
+    inv_add(inv, cert_limpwurt_root, ~random_range(5, 30));
+    ~objbox(limpwurt_root, "You open the casket. Inside you find some roots.", 250, 0, divide(^objbox_height, 2));
+} else if ($random < 64) {
+    inv_add(inv, cert_snape_grass, ~random_range(5, 18));
+    ~objbox(snape_grass, "You open the casket. Inside you find some grass.", 250, 0, divide(^objbox_height, 2));
+} else if ($random < 72) {
+    inv_add(inv, cert_unicorn_horn_dust, ~random_range(5, 18));
+    ~objbox(unicorn_horn_dust, "You open the casket. Inside you find some dust.", 250, 0, divide(^objbox_height, 2));
+} else if ($random < 76) {
+    inv_add(inv, cert_white_berries, ~random_range(5, 18));
+    ~objbox(white_berries, "You open the casket. Inside you find some berries.", 250, 0, divide(^objbox_height, 2));
+} else if ($random < 78) {
+    inv_add(inv, cert_dragon_scale_dust, ~random_range(3, 10));
+    ~objbox(dragon_scale_dust, "You open the casket. Inside you find some dust.", 250, 0, divide(^objbox_height, 2));
+} else if ($random < 82) {
+    inv_add(inv, cert_wine_of_zamorak, ~random_range(5, 15));
+    ~objbox(wine_of_zamorak, "You open the casket. Inside you find some unholy looking wines.", 250, 0, divide(^objbox_height, 2));
+} else if ($random < 84) {
+    inv_add(inv, cert_jangerberries, ~random_range(5, 18));
+    ~objbox(jangerberries, "You open the casket. Inside you find some berries.", 250, 0, divide(^objbox_height, 2));
+} else if ($random < 97) {
+    inv_add(inv, cert_bones, ~random_range(15, 50));
+    ~objbox(bones, "You open the casket. Inside you find some bones?!?", 250, 0, divide(^objbox_height, 2));
+} else if ($random < 113) {
+    inv_add(inv, cert_big_bones, ~random_range(10, 30));
+    ~objbox(big_bones, "You open the casket. Inside you find some big bones!?!", 250, 0, divide(^objbox_height, 2));
+} else if ($random < 121) {
+    inv_add(inv, cert_babydragon_bones, ~random_range(5, 18));
+    ~objbox(babydragon_bones, "You open the casket. Inside you find some baby dragon bones?!?", 250, 0, divide(^objbox_height, 2));
+} else if ($random < 125) {
+    inv_add(inv, cert_dragon_bones, ~random_range(3, 10));
+    ~objbox(dragon_bones, "You open the casket. Inside you find some dragon bones!!!", 250, 0, divide(^objbox_height, 2));
 } else if ($random < 127) { // 1/128 tooth half key
     inv_add(inv, keyhalf1, 1);
     ~objbox(keyhalf1, "You open the casket. Inside you find half a key.", 250, 0, 0);
