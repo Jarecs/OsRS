@@ -219,7 +219,7 @@ if (stat_random(stat(mining), $low, $high) = true) {
     // loc_change(loc_param(next_loc_stage_mining), $respawn);
     // stop mining, give ore and xp.
     sound_synth(found_gem, 0, 0);
-    anim(null, 0);
+    // anim(null, 0);
     def_namedobj $gem;
     def_int $count;
     $gem, $count = ~roll_on_drop_table(gem_rock_table);
@@ -229,7 +229,7 @@ if (stat_random(stat(mining), $low, $high) = true) {
     db_find(gem_cutting_table:uncut_gem, $gem);
     $data = db_findnext;
     mes("You just mined <~add_article(oc_name(db_getfield($data, gem_cutting_table:cut_gem, 0)))>!");
-    return;
+    // return;
 }
 p_oploc(3);
 

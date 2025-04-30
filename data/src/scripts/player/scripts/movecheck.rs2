@@ -4,7 +4,7 @@ if (map_clock < %stunned) {
     p_walk(coord);
     walktrigger(stunned);
 
-    if (getqueue(pickpocket) > 0) {
-        clearqueue(pickpocket);
+    if (getqueue(pickpocket_repeat) > 0) {
+        clearqueue(pickpocket_repeat);
     }
 }
