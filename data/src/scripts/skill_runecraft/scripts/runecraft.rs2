@@ -96,6 +96,14 @@ mes("You bind the temple's power into <db_getfield($data, runecraft_table:name, 
 inv_add(inv, $rune, calc($total_ess * $rune_count_per_ess));
 p_delay(3);
 
+[opheldu,_talismans]
+if (oc_category(last_item) ! category_149) {
+    ~displaymessage(^dm_default);
+    return;
+}
+def_int $count = min(inv_total(inv, last_item), inv_freespace(inv));
+inv_del(inv, last_item, $count);
+inv_add(inv, blankrune, $count);
 
 [opheld4,_talismans]
 def_obj $last_item = last_item;
