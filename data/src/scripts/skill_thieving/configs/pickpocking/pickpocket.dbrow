@@ -36,6 +36,17 @@ data=stun_ticks,13
 data=stun_damage,1
 data=success_chance,150,240
 data=loot,coins,9,9,123
+data=loot,unidentified_guam,1,1,32
+data=loot,unidentified_marrentill,1,1,24
+data=loot,unidentified_tarromin,1,1,18
+data=loot,unidentified_harralander,1,1,14
+data=loot,unidentified_ranarr,1,1,11
+data=loot,unidentified_irit,1,1,8
+data=loot,unidentified_avantoe,1,1,6
+data=loot,unidentified_kwuarm,1,1,5
+data=loot,unidentified_cadantine,1,1,4
+data=loot,unidentified_lantadyme,1,1,3
+data=loot,unidentified_dwarf_weed,1,1,3
 data=pocket,farmer's pocket
 
 [pickpocket_warrior]
