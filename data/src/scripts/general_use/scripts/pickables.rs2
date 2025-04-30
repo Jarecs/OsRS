@@ -70,7 +70,6 @@ if(inv_freespace(inv) = 0) {
 loc_findallzone(coord);
 while (loc_findnext = true) {
     if (loc_type = flax_ground) {
-        mes("Found more flax");
         p_oploc(2);
         return;
     }
