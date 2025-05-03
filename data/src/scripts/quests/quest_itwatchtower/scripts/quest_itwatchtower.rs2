@@ -547,7 +547,18 @@ if(inv_total(inv, powering_crystal1) > 0 & inv_total(inv, powering_crystal2) > 0
 return (false);
 
 [opheld1,watchtowerspell]
-if(%itwatchtower_progress = ^itwatchtower_complete) %itwatchtower_progress = ^itwatchtower_complete_read_scroll;
+if(%itwatchtower_progress ! ^itwatchtower_complete) {
+    ~mesbox("Do you want to skip the Watch Tower quest?");
+    def_int $option = ~p_choice2("Yes", 1, "No", 2);
+    if($option = 1) {
+        %itwatchtower_progress = ^itwatchtower_complete;
+        queue(itwatchtower_quest_complete, 0);
+        return;
+    } else if($option = 2) {
+        return;
+    }
+}
+if (%itwatchtower_progress = ^itwatchtower_complete) %itwatchtower_progress = ^itwatchtower_complete_read_scroll;
 ~mesbox("You memorise what is written on the scroll.");
 inv_del(inv, watchtowerspell, 1);
 ~mesbox("You can now cast the Watchtower Teleport spell...|...providing you have the required runes and magic level.");

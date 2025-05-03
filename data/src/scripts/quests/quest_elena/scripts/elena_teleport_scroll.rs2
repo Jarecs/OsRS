@@ -1,11 +1,15 @@
 [opheld1,ardougnescroll]
 if(%elena_progress ! ^elena_complete) {
-    inv_del(inv, ardougnescroll, 1);
-    spotanim_pl(firewave_impact, 124, 0);
-    sound_synth(fire_lit, 0, 0);
-    ~damage_self(0);
-    ~mesbox("The scroll bursts into flame.");
-    return;
+    ~mesbox("Do you want to skip the Plague City quest?");
+    def_int $option = ~p_choice2("Yes", 1, "No", 2);
+    if($option = 1) {
+        ~quest_elena_set_progress(^elena_complete);
+        session_log(^log_adventure, "Quest complete: Plague City");
+        ~send_quest_complete(questlist:elena, gasmask, 250, ^elena_questpoints, "You have completed the\\nPlague City Quest!");
+        return;
+    } else if($option = 2) {
+        return;
+    }
 }
 // https://youtu.be/lw1AzW2OoT0?si=JAeu3X1AvUCdTpgq&t=1020 (linebreak from rsc)
 ~objbox(ardougnescroll, "You memorise what is written on the scroll.", 250, 0, 0);
