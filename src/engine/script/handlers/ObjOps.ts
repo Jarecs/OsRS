@@ -29,10 +29,8 @@ const ObjOps: CommandHandlers = {
         const objType: ObjType = check(objId, ObjTypeValid);
 
         // --- Bone Dissolver Logic Start ---
-        const BONE_EXP_PARAM_ID = 187;
-        const boneXp = ParamHelper.getIntParam(BONE_EXP_PARAM_ID, objType, 0);
-
-        if (boneXp > 0 && state.activePlayer) {
+        const bones = ['bones', 'bones_burnt', 'bat_bones', 'big_bones', 'babydragon_bones', 'dragon_bones', 'wolf_bones'];
+        if (bones.includes(objType.debugname ?? '') && state.activePlayer) {
             const player: Player = state.activePlayer;
             const boneDissolverId = 713;
             const quiverSlotId = ObjType.getWearPosId('quiver');
@@ -40,8 +38,13 @@ const ObjOps: CommandHandlers = {
             const equippedItem = player.invGetSlot(InvType.WORN, quiverSlotId);
             const hasDissolverEquipped = equippedItem?.id === boneDissolverId;
             const hasDissolverInventory = player.invTotal(InvType.INV, boneDissolverId) > 0;
-            
+
             if (hasDissolverEquipped || hasDissolverInventory) {
+                // Assume the first and only param is the XP value
+                const boneXp = Array.from(objType.params.values())[0];
+                if (typeof boneXp !== 'number') {
+                    throw new Error(`Bone XP is not a number for ${objType.debugname}`);
+                }
                 player.addXp(PlayerStat.PRAYER, boneXp);
                 return;
             }
@@ -172,11 +175,11 @@ const ObjOps: CommandHandlers = {
         const value = obj.count * objType.cost;
         state.activePlayer.addWealthLog(value, `Picked up ${objType.debugname} x${obj.count}`);
         state.activePlayer.addWealthEvent({
-            event_type: WealthEventType.PICKUP, 
-            account_items: [{ id: objType.id, name: objType.debugname, count: obj.count }], 
+            event_type: WealthEventType.PICKUP,
+            account_items: [{ id: objType.id, name: objType.debugname, count: obj.count }],
             account_value: value
         });
-        
+
         if (obj.lifecycle === EntityLifeCycle.RESPAWN) {
             World.removeObj(obj, objType.respawnrate);
         } else if (obj.lifecycle === EntityLifeCycle.DESPAWN) {

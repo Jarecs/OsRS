@@ -3,6 +3,11 @@ def_int $rolls = calc(3 + random(3));
 def_int $roll = 0;
 def_int $rare = 0;
 
+if (random(3) = 0) {
+    def_namedobj $trail_clue_medium = enum(int, namedobj, trail_medium_enum, random(enum_getoutputcount(trail_medium_enum)));
+    inv_add(trail_rewardinv, $trail_clue_medium, 1);
+}
+
 while ($roll < $rolls) {
     // Rare drop chance was 1/11 in OSRS in 2019. @https://twitter.com/JagexTide/status/1131933683714330624, 112 items in 2019, there are 13 in May 04
     // so the chance is 1/95 ((112/13) * 11)
