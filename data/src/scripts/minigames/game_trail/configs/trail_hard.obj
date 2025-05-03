@@ -10,6 +10,7 @@ model=model_3374_obj
 2dxan=360
 iop1=Read
 category=trail_clue_hard
+param=trail_coord,0_51_54_45_47
 tradeable=no
 
 [trail_clue_hard_sextant001]
@@ -272,6 +273,7 @@ model=model_3374_obj
 iop1=Read
 category=trail_clue_hard
 param=trail_desc,You will need to under-cook|to solve this one.
+param=trail_coord,0_50_150_19_17
 tradeable=no
 
 [trail_clue_hard_riddle002]
@@ -323,6 +325,7 @@ iop1=Read
 category=trail_clue_hard
 param=trail_desc,If a man carried my burden,|he would break his back.|I am not rich,|but leave silver in my track.|Speak to the keeper of my trail.
 param=trail_casket,trail_clue_hard_riddle004_casket
+param=trail_coord,0_47_50_6_24
 tradeable=no
 
 [trail_clue_hard_riddle005]
@@ -355,6 +358,7 @@ model=model_3374_obj
 iop1=Read
 category=trail_clue_hard
 param=trail_desc,My home is grey, and made of stone;|A castle with a search for a meal.|Hidden in some drawers I am,|across from a wooden wheel.
+param=trail_coord,1_50_50_13_16
 tradeable=no
 
 [trail_clue_hard_riddle007]
@@ -387,6 +391,7 @@ model=model_3374_obj
 iop1=Read
 category=trail_clue_hard
 param=trail_desc,Four blades I have, yet draw no blood;|Still I turn my prey to powder.| If you are brave, come search my roof;| It is there my blades are louder.
+param=trail_coord,2_49_51_30_45
 tradeable=no
 
 [trail_clue_hard_riddle009]
@@ -453,6 +458,7 @@ model=model_3374_obj
 iop1=Read
 category=trail_clue_hard
 param=trail_desc,Snah? I feel all confused,|like one of those cakes...
+param=trail_teleport,0_50_50_21_19
 tradeable=no
 
 [trail_clue_hard_riddle013]
@@ -469,6 +475,7 @@ iop1=Read
 category=trail_clue_hard
 // https://youtu.be/LWfcA_C2bJY?si=YqJBRZYBy1JFXOO_&t=124
 param=trail_desc,@or2@'A bag belt only?'|He asked his balding brothers.
+param=trail_teleport,0_47_54_50_27
 tradeable=no
 
 [trail_clue_hard_riddle014]
@@ -484,6 +491,7 @@ model=model_3374_obj
 iop1=Read
 category=trail_clue_hard
 param=trail_desc,The keeper of Melzars...|Spare? Skeleton? Anar?
+param=trail_teleport,0_47_54_61_61
 tradeable=no
 
 [trail_clue_hard_riddle015]
@@ -499,6 +507,7 @@ model=model_3374_obj
 iop1=Read
 category=trail_clue_hard
 param=trail_desc,Surprising? I bet he is...
+param=trail_teleport,0_50_54_4_16
 tradeable=no
 
 [trail_clue_hard_riddle016]
@@ -514,6 +523,7 @@ model=model_3374_obj
 iop1=Read
 category=trail_clue_hard
 param=trail_desc,My name is like a tree,|yet it is spelt with a 'g'.|Come see the fur|which is right near me.
+param=trail_teleport,0_50_53_18_41
 tradeable=no
 
 [trail_clue_hard_riddle017]
@@ -529,4 +539,5 @@ model=model_3374_obj
 iop1=Read
 category=trail_clue_hard
 param=trail_desc,Generally speaking,|his nose was very bent.
+param=trail_teleport,0_46_54_14_54
 tradeable=no

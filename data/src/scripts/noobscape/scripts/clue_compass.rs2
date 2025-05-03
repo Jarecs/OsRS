@@ -1,0 +1,30 @@
+[opheld1,clue_compass]
+def_obj $clue = ~trail_getclue_inv;
+if ($clue = null) {
+    mes("You need a clue scroll in your inventory to use this item.");
+    return;
+}
+
+if(~trail_clue_coord($clue) = true) {
+    def_coord $trail_coord = oc_param($clue, trail_coord);
+    @clue_compass_teleport($trail_coord);
+}
+if(oc_param($clue, trail_key_teleport) ! null & ~obj_gettotal(oc_param($clue, trail_key)) = 0) {
+    @clue_compass_teleport(oc_param($clue, trail_key_teleport));
+}
+if(oc_param($clue, trail_teleport) ! null) {
+    @clue_compass_teleport(oc_param($clue, trail_teleport));
+}
+
+mes("Teleportation not implemented for: <oc_debugname($clue)>");
+
+[label,clue_compass_teleport](coord $coord)
+if (~wilderness_level(coord) > 1) {
+    mes("A mysterious force blocks your teleport spell!");
+    mes("You can't use this teleport in the wilderness.");
+    return;
+}
+if (~pre_tele_checks(coord) = false) {
+    return;
+}
+~player_teleport_normal(map_findsquare($coord, 1, 1, ^map_findsquare_lineofsight));

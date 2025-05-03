@@ -891,10 +891,6 @@ weight=3lb
 members=yes
 tradeable=no
 
-// rename: cert_grip_keys
-[obj_1589]
-tradeable=no
-
 [dusty_key]
 name=Dusty key
 desc=I wonder what this unlocks?

@@ -59,6 +59,7 @@ model=model_3374_obj
 iop1=Read
 category=trail_clue_easy
 param=trail_desc,Search the chest in the|Duke of Lumbridge's bedroom.
+param=trail_teleport,1_50_50_9_18
 tradeable=no
 
 [trail_clue_easy_simple002]
@@ -74,6 +75,7 @@ model=model_3374_obj
 iop1=Read
 category=trail_clue_easy
 param=trail_desc,Search the crate in the left-|hand tower of Lumbridge Castle.
+param=trail_teleport,1_50_50_28_16
 tradeable=no
 
 [trail_clue_easy_simple003]
@@ -89,6 +91,7 @@ model=model_3374_obj
 iop1=Read
 category=trail_clue_easy
 param=trail_desc,Search the boxes in the goblin|house near Lumbridge.
+param=trail_teleport,0_50_50_48_46
 tradeable=no
 
 [trail_clue_easy_simple004]
@@ -104,6 +107,7 @@ model=model_3374_obj
 iop1=Read
 category=trail_clue_easy
 param=trail_desc,Search the chests upstairs in|Al Kharid Palace.
+param=trail_teleport,1_51_49_37_33
 tradeable=no
 
 [trail_clue_easy_simple005]
@@ -119,6 +123,7 @@ model=model_3374_obj
 iop1=Read
 category=trail_clue_easy
 param=trail_desc,Speak to Hans to|solve the clue.
+param=trail_teleport,0_50_50_21_19
 tradeable=no
 
 [trail_clue_easy_simple006]
@@ -134,6 +139,7 @@ model=model_3374_obj
 iop1=Read
 category=trail_clue_easy
 param=trail_desc,Search the crates in the|most north-western house in Al Kharid.
+param=trail_teleport,0_51_50_25_2
 tradeable=no
 
 [trail_clue_easy_simple007]
@@ -149,6 +155,7 @@ model=model_3374_obj
 iop1=Read
 category=trail_clue_easy
 param=trail_desc,Talk to Zeke in Al Kharid.
+param=trail_teleport,0_51_49_23_53
 tradeable=no
 
 [trail_clue_easy_simple008]
@@ -164,6 +171,7 @@ model=model_3374_obj
 iop1=Read
 category=trail_clue_easy
 param=trail_desc,Speak to the tanner|in Al Kharid.
+param=trail_teleport,0_51_49_9_55
 tradeable=no
 
 [trail_clue_easy_simple009]
@@ -179,6 +187,7 @@ model=model_3374_obj
 iop1=Read
 category=trail_clue_easy
 param=trail_desc,Search the boxes in|the house near the|south entrance to Varrock.
+param=trail_teleport,0_50_52_3_56
 tradeable=no
 
 [trail_clue_easy_simple010]
@@ -194,6 +203,7 @@ model=model_3374_obj
 iop1=Read
 category=trail_clue_easy
 param=trail_desc,Speak to the bartender of the|Blue Moon Inn in Varrock.
+param=trail_teleport,0_50_53_22_6
 tradeable=no
 
 [trail_clue_easy_simple011]
@@ -209,6 +219,7 @@ model=model_3374_obj
 iop1=Read
 category=trail_clue_easy
 param=trail_desc,Search the drawers, upstairs|in the bank to|the East of Varrock.
+param=trail_teleport,1_50_53_50_28
 tradeable=no
 
 [trail_clue_easy_simple012]
@@ -224,6 +235,7 @@ model=model_3374_obj
 iop1=Read
 category=trail_clue_easy
 param=trail_desc,Search the crates|in Horvik's armoury.
+param=trail_teleport,0_50_53_28_41
 tradeable=no
 
 [trail_clue_easy_simple013]
@@ -239,6 +251,7 @@ model=model_3374_obj
 iop1=Read
 category=trail_clue_easy
 param=trail_desc,Search the drawers in|one of Gertrude's bedrooms.
+param=trail_teleport,0_49_53_20_14
 tradeable=no
 
 [trail_clue_easy_simple014]
@@ -254,6 +267,7 @@ model=model_3374_obj
 iop1=Read
 category=trail_clue_easy
 param=trail_desc,Search the boxes in the|Barbarian Village helmet shop.
+param=trail_teleport,0_48_53_1_38
 tradeable=no
 
 [trail_clue_easy_simple015]
@@ -269,6 +283,7 @@ model=model_3374_obj
 iop1=Read
 category=trail_clue_easy
 param=trail_desc,Search the drawers upstairs|in Falador's shield shop.
+param=trail_teleport,1_46_52_27_58
 tradeable=no
 
 [trail_clue_easy_simple016]
@@ -284,6 +299,7 @@ model=model_3374_obj
 iop1=Read
 category=trail_clue_easy
 param=trail_desc,Search the boxes of|Falador's general store.
+param=trail_teleport,0_46_52_11_62
 tradeable=no
 
 [trail_clue_easy_simple017]
@@ -299,6 +315,7 @@ model=model_3374_obj
 iop1=Read
 category=trail_clue_easy
 param=trail_desc,Talk to the Squire in the|White Knights' castle in Falador.
+param=trail_teleport,0_46_52_27_13
 tradeable=no
 
 [trail_clue_easy_simple018]
@@ -314,6 +331,7 @@ model=model_3374_obj
 iop1=Read
 category=trail_clue_easy
 param=trail_desc,Search the drawers in|Falador's chain mail shop.
+param=trail_teleport,0_46_51_25_46
 tradeable=no
 
 [trail_clue_easy_simple019]
@@ -329,6 +347,7 @@ model=model_3374_obj
 iop1=Read
 category=trail_clue_easy
 param=trail_desc,Search the crates in the|Port Sarim Fishing shop.
+param=trail_teleport,0_47_50_4_22
 tradeable=no
 
 [trail_clue_easy_simple020]
@@ -344,6 +363,7 @@ model=model_3374_obj
 iop1=Read
 category=trail_clue_easy
 param=trail_desc,Talk to the bartender of the|Rusty Anchor in Port Sarim.
+param=trail_teleport,0_47_50_39_57
 tradeable=no
 
 [trail_clue_easy_simple021]
@@ -359,6 +379,7 @@ model=model_3374_obj
 iop1=Read
 category=trail_clue_easy
 param=trail_desc,Speak to Ned in|Draynor Village.
+param=trail_teleport,0_48_50_27_58
 tradeable=no
 
 [trail_clue_easy_simple022]
@@ -374,6 +395,7 @@ model=model_3374_obj
 iop1=Read
 category=trail_clue_easy
 param=trail_desc,Speak to Doric, who|lives north of Falador.
+param=trail_teleport,0_46_53_8_59
 tradeable=no
 
 [trail_clue_easy_simple023]
@@ -389,6 +411,7 @@ model=model_3374_obj
 iop1=Read
 category=trail_clue_easy
 param=trail_desc,Speak to Gaius in Taverley.
+param=trail_teleport,0_45_53_5_58
 tradeable=no
 
 [trail_clue_easy_simple024]
@@ -404,6 +427,7 @@ model=model_3374_obj
 iop1=Read
 category=trail_clue_easy
 param=trail_desc,Search the drawers in|Catherby's Archery shop.
+param=trail_teleport,0_44_53_9_50
 tradeable=no
 
 [trail_clue_easy_simple025]
@@ -419,6 +443,7 @@ model=model_3374_obj
 iop1=Read
 category=trail_clue_easy
 param=trail_desc,Speak to Arhein in Catherby.
+param=trail_teleport,0_43_53_51_37
 tradeable=no
 
 [trail_clue_easy_simple026]
@@ -434,6 +459,7 @@ model=model_3374_obj
 iop1=Read
 category=trail_clue_easy
 param=trail_desc,Speak to Sir Kay|in Camelot Castle.
+param=trail_teleport,0_43_54_9_45
 tradeable=no
 
 [trail_clue_easy_simple027]
@@ -449,6 +475,7 @@ model=model_3374_obj
 iop1=Read
 category=trail_clue_easy
 param=trail_desc,Search the chest in the left-|hand tower of Camelot Castle.
+param=trail_teleport,2_42_54_60_39
 tradeable=no
 
 [trail_clue_easy_simple028]
@@ -464,6 +491,7 @@ model=model_3374_obj
 iop1=Read
 category=trail_clue_easy
 param=trail_desc,Search the crates in the|guard house of the northern|gate of East Ardougne.
+param=trail_teleport,0_41_52_21_10
 tradeable=no
 
 [trail_clue_easy_simple029]
@@ -479,6 +507,7 @@ model=model_3374_obj
 iop1=Read
 category=trail_clue_easy
 param=trail_desc,Search the boxes just|outside the Armour shop|in East Ardougne.
+param=trail_teleport,0_41_51_30_35
 tradeable=no
 
 [trail_clue_easy_simple030]
@@ -494,6 +523,7 @@ model=model_3374_obj
 iop1=Read
 category=trail_clue_easy
 param=trail_desc,Search the crates in East|Ardougne's general store.
+param=trail_teleport,0_40_51_55_27
 tradeable=no
 
 [trail_clue_easy_simple031]
@@ -509,6 +539,7 @@ model=model_3374_obj
 iop1=Read
 category=trail_clue_easy
 param=trail_desc,Search the crates in the shed|just north of East Ardougne.
+param=trail_teleport,0_40_52_57_19
 tradeable=no
 
 [trail_clue_easy_vague001]
@@ -524,6 +555,7 @@ model=model_3374_obj
 iop1=Read
 category=trail_clue_easy
 param=trail_desc,Search the drawers|above Varrock's shops.
+param=trail_teleport,1_50_53_6_27
 tradeable=no
 
 [trail_clue_easy_vague002]
@@ -539,6 +571,7 @@ model=model_3374_obj
 iop1=Read
 category=trail_clue_easy
 param=trail_desc,Search the crates near|a cart in Varrock.
+param=trail_teleport,0_50_53_26_60
 tradeable=no
 
 [trail_clue_easy_vague003]
@@ -554,6 +587,7 @@ model=model_3374_obj
 iop1=Read
 category=trail_clue_easy
 param=trail_desc,Search the drawers found upstairs|in East Ardougne's houses.
+param=trail_teleport,1_40_51_14_62
 tradeable=no
 
 [trail_clue_easy_vague004]
@@ -569,6 +603,7 @@ model=model_3374_obj
 iop1=Read
 category=trail_clue_easy
 param=trail_desc,A crate found in the|tower of a church is|your next location.
+param=trail_teleport,1_40_51_52_40
 tradeable=no
 
 [trail_clue_easy_vague005]
@@ -584,4 +619,5 @@ model=model_3374_obj
 iop1=Read
 category=trail_clue_easy
 param=trail_desc,Look in the ground floor|crates of houses in Falador.
+param=trail_teleport,0_47_52_21_27
 tradeable=no

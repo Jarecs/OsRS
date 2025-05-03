@@ -27,15 +27,15 @@ if(map_members = true & ~trail_hasclue_inv = true) {
     def_obj $clue = ~trail_getclue_inv;
 
     if(~trail_clue_coord($clue) = true) {
-        def_boolean $sextant_clue = oc_param($clue, trail_sextant);
+        // def_boolean $sextant_clue = oc_param($clue, trail_sextant);
         def_coord $trail_coord = oc_param($clue, trail_coord);
         // for coord clues, https://www.youtube.com/watch?v=rcNbwik5-Ig looking at wiki and this 2013 video you can be 1 tile off and it will still work
         // todo: try and confirm this behaviour for 2004, this pre dec-2006 video also has this behaviour https://www.youtube.com/watch?v=yH6YaavzuMc
         // also https://www.youtube.com/watch?v=QhdRJd-g438 for maps
-        if($sextant_clue = true & (inv_total(inv, trail_watch) = 0 | inv_total(inv, trail_chart) = 0 | inv_total(inv, trail_sextant) = 0)) {
-            ~displaymessage(^dm_default);
-            return;
-        }
+        // if($sextant_clue = true & (inv_total(inv, trail_watch) = 0 | inv_total(inv, trail_chart) = 0 | inv_total(inv, trail_sextant) = 0)) {
+        //     ~displaymessage(^dm_default);
+        //     return;
+        // }
         if(distance(coord, $trail_coord) <= 1) {
             if(oc_param($clue, trail_guardian) ! null) {
                 def_npc $guard = oc_param($clue, trail_guardian);

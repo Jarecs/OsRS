@@ -25,3 +25,15 @@ default=0
 [trail_challenge_answer]
 type=int
 default=0
+
+[trail_teleport]
+type=coord
+default=null
+
+[trail_key_teleport]
+type=coord
+default=null
+
+[trail_key]
+type=namedobj
+default=null
