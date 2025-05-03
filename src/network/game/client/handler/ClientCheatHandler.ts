@@ -455,6 +455,15 @@ export default class ClientCheatHandler extends MessageHandler<ClientCheat> {
                     return false;
                 }
                 World.addNpc(new Npc(player.level, player.x, player.z, type.size, type.size, EntityLifeCycle.DESPAWN, World.getNextNid(), type.id, type.moverestrict, type.blockwalk), 500);
+            } else if (cmd === 'playercount') {
+                player.messageGame(`Player count: ${World.getTotalPlayers()}`);
+            } else if (cmd === 'playerlist') {
+                player.messageGame(
+                    `Player list: ${World.players
+                        .filter(p => p != null)
+                        .map(p => p.username)
+                        .join(', ')}`
+                );
             }
         }
 
