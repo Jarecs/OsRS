@@ -5,6 +5,8 @@ if (npc_findhero = false) {
 }
 // Default drop from config.
 obj_add(npc_coord, npc_param(death_drop), 1, ^lootdrop_duration);
+// Always drop a limpwurt.
+obj_add(npc_coord, limpwurt_root, 1, ^lootdrop_duration);
 
 def_int $random = random(128);
 
