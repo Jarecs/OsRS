@@ -547,12 +547,13 @@ if(inv_total(inv, powering_crystal1) > 0 & inv_total(inv, powering_crystal2) > 0
 return (false);
 
 [opheld1,watchtowerspell]
-if(%itwatchtower_progress ! ^itwatchtower_complete) {
+if(%itwatchtower_progress ! ^itwatchtower_complete & %itwatchtower_progress ! ^itwatchtower_complete_read_scroll) {
     ~mesbox("Do you want to skip the Watch Tower quest?");
     def_int $option = ~p_choice2("Yes", 1, "No", 2);
     if($option = 1) {
         %itwatchtower_progress = ^itwatchtower_complete;
         queue(itwatchtower_quest_complete, 0);
+        %questpoints = add(%questpoints, ^itwatchtower_questpoints);
         return;
     } else if($option = 2) {
         return;
