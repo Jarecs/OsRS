@@ -31,6 +31,7 @@ stock22=bronze_axe,2,500
 stock23=bronze_pickaxe,2,500
 stock24=iron_axe,5,700
 stock25=bronze_bar,10,500
+stock26=karamja_map,1,100
 
 [boozeshop]
 // https://oldschool.runescape.wiki/w/Karamja_Wines,_Spirits,_and_Beers.

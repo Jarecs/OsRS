@@ -1,0 +1,25 @@
+[opheld1,karamja_map]
+switch_int(~p_choice4("Brimhaven", 1, "Musa Point", 2, "Tai Bwo Wannai", 3, "Shilo Village", 4)) {
+    case 1 :
+        @newcomer_map_teleport(map_findsquare(0_43_49_50_20, 0, 2, ^map_findsquare_lineofwalk));
+    case 2 :
+        @newcomer_map_teleport(map_findsquare(0_45_49_27_14, 0, 2, ^map_findsquare_lineofwalk));
+    case 3 :
+        @newcomer_map_teleport(map_findsquare(0_43_47_38_32, 0, 2, ^map_findsquare_lineofwalk));
+    case 4 :
+        @newcomer_map_teleport(map_findsquare(0_44_46_53_38, 0, 2, ^map_findsquare_lineofwalk));
+}
+
+[opheld1,western_map]
+switch_int(~p_choice5("Tree Gnome Stronghold", 1, "Hemenster", 2, "Observatory", 3, "Port Khazard", 4, "Gu'Tanoth", 5)) {
+    case 1 :
+        @newcomer_map_teleport(map_findsquare(1_37_54_14_51, 0, 2, ^map_findsquare_lineofwalk));
+    case 2 :
+        @newcomer_map_teleport(map_findsquare(0_41_53_30_49, 0, 2, ^map_findsquare_lineofwalk));
+    case 3 :
+        @newcomer_map_teleport(map_findsquare(0_38_49_39_53, 0, 2, ^map_findsquare_lineofwalk));
+    case 4 :
+        @newcomer_map_teleport(map_findsquare(0_41_49_36_21, 0, 2, ^map_findsquare_lineofwalk));
+    case 5 :
+        @newcomer_map_teleport(map_findsquare(0_39_47_44_38, 0, 2, ^map_findsquare_lineofwalk));
+}

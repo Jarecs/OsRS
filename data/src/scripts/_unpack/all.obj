@@ -1080,14 +1080,6 @@ recol1d=7400
 members=yes
 tradeable=no
 
-// rename: cert_blondwig
-[obj_2420]
-tradeable=no
-
-// rename: cert_plainwig
-[obj_2422]
-tradeable=no
-
 // rename: cert_skinpaste
 [obj_2425]
 tradeable=no
