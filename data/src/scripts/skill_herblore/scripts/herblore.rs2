@@ -29,8 +29,20 @@ if (inv_total(inv, $ingredient) > 0 & inv_total(inv, $solvent) > 0) {
 
 /** Grind a herblore ingredient. */
 [proc,grind_ingredient](obj $grindable, namedobj $refined, string $message, int $slot)
+if (getqueue(grind_ingredient_repeat) > 0) {
+  clearqueue(grind_ingredient_repeat);
+}
 inv_setslot(inv, $slot, $refined, 1);
 // https://youtu.be/QUWaqEBTrCE?t=107
 mes($message);
 anim(human_herbing_grind, 0);
 sound_synth(grind, 0, 0);
+queue(grind_ingredient_repeat, 2, $grindable, $refined, $message);
+
+[queue,grind_ingredient_repeat](obj $grindable, namedobj $refined, string $message)
+if (inv_total(inv, $grindable) > 0) {
+  def_int $slot = ~inv_find(inv, $grindable, 0);
+  if ($slot >= 0) {
+    ~grind_ingredient($grindable, $refined, $message, $slot);
+  }
+}

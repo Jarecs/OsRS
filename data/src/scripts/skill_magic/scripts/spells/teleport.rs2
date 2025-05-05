@@ -64,6 +64,12 @@ clearqueue(superheat_repeat);
 clearqueue(smelting_repeat);
 clearqueue(crafting_gem_repeat);
 clearqueue(brew_potion_repeat);
+clearqueue(string_amulet_repeat);
+clearqueue(grind_ingredient_repeat);
+clearqueue(fill_container_water_repeat);
+clearqueue(make_softclay_repeat);
+clearqueue(craft_pottery_repeat);
+clearqueue(fire_pottery_repeat);
 if(inv_total(inv, thanainabarrel) > 0) {
     ~chatnpc_specific("Ana (in a Barrel)", anabarrel, "<p,idle>@dbl@-- You can't teleport while holding the barrel, it's just @dbl@too difficult to concentrate. --");
     return;
