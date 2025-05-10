@@ -10,16 +10,16 @@ if(coordz(coord) < coordz($start_pos)) {
     return;
 }
 p_delay(0);
-if(stat_random(stat(agility), 200, 260) = false) {
-    // todo: actual rates (same for every other fail on this course)
-    ~agility_instant_fail(0_39_155_54_29, calc(((stat(hitpoints) * 15) / 100) + 1), "You slip and fall to the pit below.");
-    p_teleport(movecoord(coord, 1, 0, -1));
-    return;
-}
+// if(stat_random(stat(agility), 200, 260) = false) {
+//     // todo: actual rates (same for every other fail on this course)
+//     ~agility_instant_fail(0_39_155_54_29, calc(((stat(hitpoints) * 15) / 100) + 1), "You slip and fall to the pit below.");
+//     p_teleport(movecoord(coord, 1, 0, -1));
+//     return;
+// }
 p_teleport($start_pos);
 if(%barb_ropeswing_used >= map_clock) {
-    ~mesbox("The rope swing is being used");
-    return;
+    ~mesbox("You somehow share the rope.");
+    // return;
 }
 %barb_ropeswing_used = calc(map_clock + 3);
 if($delay > 0) p_delay($delay);
@@ -29,36 +29,46 @@ mes("You skillfully swing across.");
 stat_advance(agility, 200);
 ~update_barbarian_varp(1);
 
+// Go to the log balance
+if (loc_find(0_39_55_54_26, barbarian_log_balance) = true) {
+    p_oploc(1);
+}
+
 [oploc1,barbarian_log_balance]
 p_teleport(movecoord(loc_coord, 1, 0, 0));
 p_arrivedelay;
 mes("You walk carefully across the slippery log...");
 ~set_readywalk_bas(human_walk_logbalance_ready, human_walk_logbalance);
 ~forcemove(movecoord(coord, -6, 0, 0));
-if(stat_random(stat(agility), 185, 260) = false) {
-    mes("...You lose your footing and fall into the water.");
-    anim(human_walk_logbalance_stumble, 0);
-    facesquare(movecoord(coord, 0, 0, -2));
-    p_delay(0);
-    mes("Something in the water bites you!");
-    sound_synth(watersplash, 0, 0);
-    p_exactmove(movecoord(coord, -1, 0, 0), movecoord(coord, 0, 0, -1), 0, 5, ^exact_south);
-    spotanim_map(watersplash, movecoord(coord, 0, 0, -1), 0, 3);
-    ~set_readywalkturn_bas(human_swim_ready, human_swim_ready, human_swim);
-    p_delay(0);
-    p_teleport(movecoord(coord, 0, 0, -2));
-    p_delay(0);
-    ~forcemove(movecoord(coord, 0, 0, -1));
-    ~update_bas;
-    ~damage_self(calc(((stat(hitpoints) * 9) / 100) + 1));
-    return;
-}
+// if(stat_random(stat(agility), 185, 260) = false) {
+//     mes("...You lose your footing and fall into the water.");
+//     anim(human_walk_logbalance_stumble, 0);
+//     facesquare(movecoord(coord, 0, 0, -2));
+//     p_delay(0);
+//     mes("Something in the water bites you!");
+//     sound_synth(watersplash, 0, 0);
+//     p_exactmove(movecoord(coord, -1, 0, 0), movecoord(coord, 0, 0, -1), 0, 5, ^exact_south);
+//     spotanim_map(watersplash, movecoord(coord, 0, 0, -1), 0, 3);
+//     ~set_readywalkturn_bas(human_swim_ready, human_swim_ready, human_swim);
+//     p_delay(0);
+//     p_teleport(movecoord(coord, 0, 0, -2));
+//     p_delay(0);
+//     ~forcemove(movecoord(coord, 0, 0, -1));
+//     ~update_bas;
+//     ~damage_self(calc(((stat(hitpoints) * 9) / 100) + 1));
+//     return;
+// }
 ~forcemove(movecoord(coord, -3, 0, 0));
 mes("...You make it safely to the other side.");
 ~forcemove(movecoord(coord, -1, 0, 0));
 ~update_bas;
 stat_advance(agility, 125);
 ~update_barbarian_varp(2);
+
+// Go to the obstacle net
+if (loc_find(0_39_55_42_25, barbarian_obstacle_net) = true) {
+    p_oploc(1);
+}
 
 [oploc1,barbarian_obstacle_net]
 if(coordx(coord) <= coordx(loc_coord)) {
@@ -67,6 +77,11 @@ if(coordx(coord) <= coordx(loc_coord)) {
 mes("You climb the netting...");
 ~agility_climb_up(75, movecoord(loc_coord, -1, 1, 1));
 ~update_barbarian_varp(3);
+
+// Go to the ledge
+if (loc_find(1_39_55_39_27, barbarian_ledge) = true) {
+    p_oploc(1);
+}
 
 [oploc1,barbarian_ledge]
 p_delay(0);
@@ -94,6 +109,11 @@ p_delay(0);
 stat_advance(agility, 200);
 ~update_barbarian_varp(4);
 
+// Go to the ladder
+if (loc_find(1_39_55_36_25, laddertop_norim) = true) {
+    p_oploc(1);
+}
+
 [oploc1,barbarian_crumblingwall] 
 if(coordx(coord) > coordx(loc_coord)) {
     mes("You cannot climb that from this side.");
@@ -106,6 +126,14 @@ def_coord $start = movecoord(loc_coord, -1, 0, 0);
 stat_advance(agility, 125);
 if(loc_coord = 0_39_55_46_33) {
     ~update_barbarian_varp(5);
+}
+// Go to the crumbling wall
+if (loc_coord = 0_39_55_43_33 & loc_find(0_39_55_46_33, barbarian_crumblingwall) = true) {
+    p_oploc(1);
+}
+// Go to the crumbling wall
+if (loc_coord = 0_39_55_40_33 & loc_find(0_39_55_43_33, barbarian_crumblingwall) = true) {
+    p_oploc(1);
 }
 
 [oploc1,barbarian_obstacle_pipe]

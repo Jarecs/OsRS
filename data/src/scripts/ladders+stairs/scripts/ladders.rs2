@@ -152,6 +152,11 @@ if ($up = true) {
 p_delay(0);
 p_telejump($coord);
 
+// Go to the barbarian assault crumbling wall
+if (loc_coord = 1_39_55_36_25 & loc_find(0_39_55_40_33, barbarian_crumblingwall) = true) {
+    p_oploc(1);
+}
+
 [label,ladder_options](coord $up, coord $down)
 def_int $option = ~p_choice2_header("Climb Up.", 1, "Climb Down.", 2, "Climb up or down the ladder?");
 if_close;
