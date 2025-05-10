@@ -16,6 +16,7 @@ if (%npc_int = ^triffid_growing) {
     return;
 }
 inv_add(inv, macro_triffidfruit, 1);
+inv_add(inv, casket, 1);
 sound_synth(pick, 0, 0);
 // https://youtu.be/ghfKpXe7N5s?t=24
 mes("You pick the fruit from the plant."); // osrs

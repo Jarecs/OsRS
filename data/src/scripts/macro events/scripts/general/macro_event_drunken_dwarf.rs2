@@ -68,6 +68,7 @@ if (%npc_int = ^drunken_dwarf_happy) {
 }
 inv_add(inv, kebab, 1);
 inv_add(inv, beer, 1);
+inv_add(inv, casket, 1);
 
 %npc_int = ^drunken_dwarf_happy;
 %macro_event = ^no_macro_event;
