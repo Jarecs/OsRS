@@ -108,6 +108,10 @@ if ($data = null) {
     ~displaymessage(^dm_default);
     return;
 }
+// roll for clue
+~trail_hardcluedrop(128, coord);
+~trail_mediumcluedrop(128, coord);
+~trail_easycluedrop(128, coord);
 // roll for gem
 def_int $chance = 256;
 def_obj $neck = inv_getobj(worn, ^wearpos_front);
@@ -153,6 +157,10 @@ if ($data = null) {
     ~displaymessage(^dm_default);
     return;
 }
+// roll for clue
+~trail_hardcluedrop(128, coord);
+~trail_mediumcluedrop(128, coord);
+~trail_easycluedrop(128, coord);
 // roll for gem
 def_int $chance = 256;
 def_obj $neck = inv_getobj(worn, ^wearpos_front);
