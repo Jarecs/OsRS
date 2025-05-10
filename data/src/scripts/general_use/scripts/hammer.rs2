@@ -1,5 +1,25 @@
 [opheldu,hammer]
-switch_obj (last_useitem) {
-    case red_topaz, opal, jade, uncut_red_topaz, uncut_opal, uncut_jade : mes("You can't think of any reason to do this.");
-    case default : ~displaymessage(^dm_default);
+db_find(smithing:ifproduct, last_useitem);
+def_dbrow $data = db_findnext;
+if ($data = null) {
+    ~displaymessage(^dm_default);
+    return;
 }
+
+def_int $item_amount = db_getfield($data, smithing:product_amount, 0);
+def_int $bar_amount = db_getfield($data, smithing:bar_amount, 0);
+def_namedobj $bar = db_getfield($data, smithing:bar, 0);
+
+if (inv_total(inv, last_useitem) < $item_amount) {
+    mes("You don't have enough <oc_name(last_useitem)> to convert to bars.");
+    return;
+}
+
+inv_del(inv, last_useitem, $item_amount);
+inv_add(inv, $bar, $bar_amount);
+mes("You convert your <oc_name(last_useitem)> back into <oc_name($bar)>s.");
+
+// switch_obj (last_useitem) {
+//     case red_topaz, opal, jade, uncut_red_topaz, uncut_opal, uncut_jade : mes("You can't think of any reason to do this.");
+//     case default : ~displaymessage(^dm_default);
+// }
