@@ -285,7 +285,7 @@ export default class Player extends PathingEntity {
     ];
     colors: number[] = [0, 0, 0, 0, 0];
     gender: number = 0;
-    run: number = 0;
+    run: number = 1;
     tempRun: number = 0;
     runenergy: number = 10000;
     lastRunEnergy: number = -1;
@@ -1691,7 +1691,7 @@ export default class Player extends PathingEntity {
         }
 
         // Exponentially increasing XP multiplier up to 99x at level 99.
-        const multi =  Math.pow(1.047, this.baseLevels[stat]) + 2;
+        const multi = Math.pow(1.047, this.baseLevels[stat]) + 2;
         this.stats[stat] += xp * (allowMulti ? multi : 1);
 
         // cap to 200m, this is represented as "2 billion" because we use 32-bit signed integers and divide by 10 to give us a decimal point
