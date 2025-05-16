@@ -1,0 +1,11 @@
+[clue_compass]
+name=Clue Compass
+desc=A wizard's treasure hunting device.
+tradeable=no
+cost=1
+model=model_2525_obj
+2dyof=-1
+2dzoom=690
+2dyan=2032
+2dxan=368
+iop1=Locate

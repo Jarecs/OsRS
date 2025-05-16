@@ -4,6 +4,11 @@ def_int $rolls = calc(2 + random(3));
 def_int $roll = 0;
 def_int $rare = 0;
 
+if (random(3) = 0) {
+    def_namedobj $trail_clue_easy = enum(int, namedobj, trail_easy_enum, random(enum_getoutputcount(trail_easy_enum)));
+    inv_add(trail_rewardinv, $trail_clue_easy, 1);
+}
+
 while ($roll < $rolls) {
     // Rare drop chance was 1/12 in OSRS in 2019. @https://twitter.com/JagexTide/status/1131933683714330624
     // This was adjusted from 1/21 at clue expansion, according to Mod John C:
@@ -63,7 +68,7 @@ switch_int ($random) {
 }
 
 [proc,trail_clue_easy_rare]
-def_int $random = random(12);
+def_int $random = random(13);
 
 switch_int ($random) {
     case 0 : inv_add(trail_rewardinv, black_platebody_trim, 1);
@@ -78,4 +83,5 @@ switch_int ($random) {
     case 9 : inv_add(trail_rewardinv, berret_blue, 1);
     case 10 : inv_add(trail_rewardinv, berret_black, 1);
     case 11 : inv_add(trail_rewardinv, berret_white, 1);
+    case 12 : inv_add(trail_rewardinv, boots_wizard, 1);
 }

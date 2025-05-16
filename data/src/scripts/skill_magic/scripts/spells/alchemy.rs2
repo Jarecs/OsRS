@@ -3,6 +3,11 @@
 
 [label,magic_spell_high_alch](int $spell, obj $item)
 if_close;
+if (getqueue(high_alch_repeat) > 0) {
+    clearqueue(high_alch_repeat);
+    return;
+}
+
 // look for spell in db
 def_dbrow $spell_data = ~get_spell_data($spell);
 if (~check_spell_requirements($spell_data) = false) {
@@ -33,12 +38,28 @@ if (afk_event = ^true) {
 // https://www.neoseeker.com/forums/2410/t960058-useless-rs-facts/2.htm
 // > When you high alch while your cannon is spinning, it stops spinning until you finish alching
 // Also this video: https://www.youtube.com/watch?v=P_o3Cxg73Tg&t=91s
-if_settabactive(^tab_magic);
-p_delay(3);
+// if_settabactive(^tab_magic);
+// p_delay(3);
+
+queue(high_alch_repeat, 5, $item);
+
+//---queue to repeat alching.
+[queue,high_alch_repeat](obj $item)
+if(inv_total(inv, $item) > 0) {
+    def_int $slot = ~inv_find(inv, $item, 0);
+    if ($slot >= 0) {
+        @magic_spell_high_alch(^highlvl_alchemy, inv_getobj(inv, $slot));
+    }
+}
 
 
 [label,magic_spell_low_alch](int $spell, obj $item)
 if_close;
+if (getqueue(low_alch_repeat) > 0) {
+    clearqueue(low_alch_repeat);
+    return;
+}
+
 // look for spell in db
 def_dbrow $spell_data = ~get_spell_data($spell);
 if (~check_spell_requirements($spell_data) = false) {
@@ -61,12 +82,22 @@ wealth_log(^wealth_gained, $profit, "Low alching <oc_debugname($item)>");
 wealth_event(^wealth_low_alch, oc_debugname($item), 1, $profit);
 inv_del(inv, $item, 1);
 inv_add(inv, coins, $profit);
-if_settabactive(^tab_magic);
+// if_settabactive(^tab_magic);
 if (afk_event = ^true) {
     ~macro_event_general_spawn(~macro_event_set_random);
 }
 // delay by 3 ticks
-p_delay(1);
+// p_delay(1);
+queue(low_alch_repeat, 3, $item);
+
+//---queue to repeat alching.
+[queue,low_alch_repeat](obj $item)
+if(inv_total(inv, $item) > 0) {
+    def_int $slot = ~inv_find(inv, $item, 0);
+    if ($slot >= 0) {
+        @magic_spell_low_alch(^lowlvl_alchemy, inv_getobj(inv, $slot));
+    }
+}
 
 [proc,is_alchable](obj $item, dbrow $spell_data)(boolean)
 def_namedobj $rune1;

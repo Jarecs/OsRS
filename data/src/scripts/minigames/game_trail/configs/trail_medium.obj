@@ -278,7 +278,9 @@ model=model_3374_obj
 iop1=Read
 category=trail_clue_medium
 param=trail_desc,You'll need to look for|a town with a central|fountain. Look for a locked|chest in the town's chapel.
-tradeable=no
+param=trail_key_teleport,0_47_57_28_58
+param=trail_key,trail_clue_medium_riddle001_key
+param=trail_teleport,0_50_54_56_31
 
 [trail_clue_medium_riddle002]
 name=Clue scroll
@@ -293,6 +295,9 @@ model=model_3374_obj
 iop1=Read
 category=trail_clue_medium
 param=trail_desc,In a town where the guards|are armed with maces, search|the upstairs rooms of the|Public House.
+param=trail_key_teleport,0_41_51_15_50
+param=trail_key,trail_clue_medium_riddle002_key
+param=trail_teleport,1_40_51_14_62
 tradeable=no
 
 [trail_clue_medium_riddle003]
@@ -308,6 +313,9 @@ model=model_3374_obj
 iop1=Read
 category=trail_clue_medium
 param=trail_desc,In a town where thieves|steal from stalls, search for|some drawers in the upstairs|of a house near the bank.
+param=trail_key_teleport,0_41_51_38_42
+param=trail_key,trail_clue_medium_riddle003_key
+param=trail_teleport,1_40_51_51_60
 tradeable=no
 
 [trail_clue_medium_riddle004]
@@ -323,6 +331,9 @@ model=model_3374_obj
 iop1=Read
 category=trail_clue_medium
 param=trail_desc,In a town where everyone has|perfect vision, seek some|locked drawers in a house that|sits opposite a workshop.
+param=trail_key_teleport,0_50_51_30_35
+param=trail_key,trail_clue_medium_riddle004_key
+param=trail_teleport,0_42_54_21_22
 tradeable=no
 
 [trail_clue_medium_riddle005]
@@ -338,6 +349,9 @@ model=model_3374_obj
 iop1=Read
 category=trail_clue_medium
 param=trail_desc,In a town where wizards are|known to gather, search|upstairs in a large|house to the north.
+param=trail_key_teleport,0_50_50_21_17
+param=trail_key,trail_clue_medium_riddle005_key
+param=trail_teleport,1_40_48_33_36
 tradeable=no
 
 [trail_clue_medium_anagram001]
@@ -353,6 +367,7 @@ model=model_3374_obj
 iop1=Read
 category=trail_clue_medium
 param=trail_desc,Speak to Hazelmere.
+param=trail_coord,1_41_48_53_14
 tradeable=no
 
 [trail_clue_medium_anagram002]
@@ -368,6 +383,7 @@ model=model_3374_obj
 iop1=Read
 category=trail_clue_medium
 param=trail_desc,This anagram reveals|who to speak to next:||OK CO
+param=trail_coord,0_50_50_8_14
 tradeable=no
 
 [trail_clue_medium_anagram003]
@@ -383,6 +399,7 @@ model=model_3374_obj
 iop1=Read
 category=trail_clue_medium
 param=trail_desc,This anagram reveals|who to speak to next:||EEK ZERO OP
+param=trail_coord,0_40_51_44_21
 tradeable=no
 
 [trail_clue_medium_anagram004]
@@ -398,6 +415,7 @@ model=model_3374_obj
 iop1=Read
 category=trail_clue_medium
 param=trail_desc,This anagram reveals|who to speak to next:||EL OW
+param=trail_coord,0_50_53_32_33
 tradeable=no
 
 [trail_clue_medium_anagram005]
@@ -413,6 +431,7 @@ model=model_3374_obj
 iop1=Read
 category=trail_clue_medium
 param=trail_desc,Speak to Hajedy.
+param=trail_coord,0_43_50_26_15
 tradeable=no
 
 [trail_clue_medium_anagram006]
@@ -429,6 +448,7 @@ iop1=Read
 category=trail_clue_medium
 // changed to R AK MI on september 26th, 2005
 param=trail_desc,This anagram reveals|who to speak to next:||BAR BELL SEEK
+param=trail_coord,0_51_49_9_44
 tradeable=no
 
 [trail_clue_medium_anagram007]
@@ -444,6 +464,7 @@ model=model_3374_obj
 iop1=Read
 category=trail_clue_medium
 param=trail_desc,This anagram reveals|who to speak to next:||ARE COL
+param=trail_coord,0_47_54_5_44
 tradeable=no
 
 [trail_clue_medium_anagram008]
@@ -459,6 +480,7 @@ model=model_3374_obj
 iop1=Read
 category=trail_clue_medium
 param=trail_desc,Speak to a referee.
+param=trail_coord,0_37_54_13_32
 tradeable=no
 
 [trail_clue_medium_anagram009]
@@ -474,6 +496,7 @@ model=model_3374_obj
 iop1=Read
 category=trail_clue_medium
 param=trail_desc,Speak to Donovan, the|Family Handyman.
+param=trail_coord,1_42_55_57_56
 tradeable=no
 
 [trail_clue_medium_anagram010]
@@ -489,6 +512,7 @@ model=model_3374_obj
 iop1=Read
 category=trail_clue_medium
 param=trail_desc,This anagram reveals|who to speak to next:||PEATY PERT
+param=trail_coord,0_42_54_49_16
 tradeable=no
 
 [trail_clue_medium_anagram011]
@@ -504,6 +528,7 @@ model=model_3374_obj
 iop1=Read
 category=trail_clue_medium
 param=trail_desc,This anagram reveals|who to speak to next:||GOBLIN KERN
+param=trail_coord,0_39_49_46_33
 tradeable=no
 
 [trail_clue_medium_anagram012]
@@ -519,6 +544,7 @@ model=model_3374_obj
 iop1=Read
 category=trail_clue_medium
 param=trail_desc,This anagram reveals|who to speak to next:||HALT US
+param=trail_coord,0_45_49_59_18
 tradeable=no
 
 [trail_clue_medium_anagram001_challenge]

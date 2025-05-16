@@ -3,4 +3,8 @@ if (map_clock < %stunned) {
     mes("You're stunned!");
     p_walk(coord);
     walktrigger(stunned);
+
+    if (getqueue(pickpocket_repeat) > 0) {
+        clearqueue(pickpocket_repeat);
+    }
 }

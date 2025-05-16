@@ -47,27 +47,27 @@ import ScriptState from '#/engine/script/ScriptState.js';
 import ServerTriggerType from '#/engine/script/ServerTriggerType.js';
 import World from '#/engine/World.js';
 import Packet from '#/io/Packet.js';
-import ChatFilterSettings from '#/network/server/model/ChatFilterSettings.js';
-import HintArrow from '#/network/server/model/HintArrow.js';
-import IfClose from '#/network/server/model/IfClose.js';
-import IfSetTab from '#/network/server/model/IfSetTab.js';
-import LastLoginInfo from '#/network/server/model/LastLoginInfo.js';
-import MessageGame from '#/network/server/model/MessageGame.js';
-import MidiJingle from '#/network/server/model/MidiJingle.js';
-import MidiSong from '#/network/server/model/MidiSong.js';
-import ResetAnims from '#/network/server/model/ResetAnims.js';
-import ResetClientVarCache from '#/network/server/model/ResetClientVarCache.js';
-import TutOpen from '#/network/server/model/TutOpen.js';
-import UnsetMapFlag from '#/network/server/model/UnsetMapFlag.js';
-import UpdateInvStopTransmit from '#/network/server/model/UpdateInvStopTransmit.js';
-import UpdateUid192 from '#/network/server/model/UpdatePid.js';
-import UpdateRebootTimer from '#/network/server/model/UpdateRebootTimer.js';
-import UpdateRunEnergy from '#/network/server/model/UpdateRunEnergy.js';
-import UpdateStat from '#/network/server/model/UpdateStat.js';
-import VarpLarge from '#/network/server/model/VarpLarge.js';
-import VarpSmall from '#/network/server/model/VarpSmall.js';
-import OutgoingMessage from '#/network/server/OutgoingMessage.js';
-import { ServerProtPriority } from '#/network/server/prot/ServerProtPriority.js';
+import { ServerProtPriority } from '#/network/game/server/codec/ServerProtPriority.js';
+import ChatFilterSettings from '#/network/game/server/model/ChatFilterSettings.js';
+import HintArrow from '#/network/game/server/model/HintArrow.js';
+import IfClose from '#/network/game/server/model/IfClose.js';
+import IfSetTab from '#/network/game/server/model/IfSetTab.js';
+import LastLoginInfo from '#/network/game/server/model/LastLoginInfo.js';
+import MessageGame from '#/network/game/server/model/MessageGame.js';
+import MidiJingle from '#/network/game/server/model/MidiJingle.js';
+import MidiSong from '#/network/game/server/model/MidiSong.js';
+import ResetAnims from '#/network/game/server/model/ResetAnims.js';
+import ResetClientVarCache from '#/network/game/server/model/ResetClientVarCache.js';
+import TutOpen from '#/network/game/server/model/TutOpen.js';
+import UnsetMapFlag from '#/network/game/server/model/UnsetMapFlag.js';
+import UpdateInvStopTransmit from '#/network/game/server/model/UpdateInvStopTransmit.js';
+import UpdateUid192 from '#/network/game/server/model/UpdatePid.js';
+import UpdateRebootTimer from '#/network/game/server/model/UpdateRebootTimer.js';
+import UpdateRunEnergy from '#/network/game/server/model/UpdateRunEnergy.js';
+import UpdateStat from '#/network/game/server/model/UpdateStat.js';
+import VarpLarge from '#/network/game/server/model/VarpLarge.js';
+import VarpSmall from '#/network/game/server/model/VarpSmall.js';
+import OutgoingMessage from '#/network/game/server/OutgoingMessage.js';
 import { LoggerEventType } from '#/server/logger/LoggerEventType.js';
 import { ChatModePrivate, ChatModePublic, ChatModeTradeDuel } from '#/util/ChatModes.js';
 import Environment from '#/util/Environment.js';
@@ -285,7 +285,7 @@ export default class Player extends PathingEntity {
     ];
     colors: number[] = [0, 0, 0, 0, 0];
     gender: number = 0;
-    run: number = 0;
+    run: number = 1;
     tempRun: number = 0;
     runenergy: number = 10000;
     lastRunEnergy: number = -1;
@@ -682,10 +682,7 @@ export default class Player extends PathingEntity {
             const recovered = ((this.baseLevels[PlayerStat.AGILITY] / 9) | 0) + 8;
             this.runenergy = Math.min(this.runenergy + recovered, 10000);
         } else {
-            const weightKg = this.runweight / 1000;
-            const clampWeight = Math.min(Math.max(weightKg, 0), 64);
-            const loss = (67 + (67 * clampWeight) / 64) | 0;
-            this.runenergy = Math.max(this.runenergy - loss, 0);
+            // Disable energy loss.
         }
 
         if (this.runenergy === 0) {
@@ -939,7 +936,14 @@ export default class Player extends PathingEntity {
     }
 
     hasInteraction() {
-        return this.target !== null;
+        if (!this.target) {
+            return false;
+        }
+        // The follow interaction doesn't do anything
+        if (this.targetOp === ServerTriggerType.APPLAYER3 || this.targetOp === ServerTriggerType.OPPLAYER3) {
+            return false;
+        }
+        return true;
     }
 
     getOpTrigger() {
@@ -1062,17 +1066,13 @@ export default class Player extends PathingEntity {
     }
 
     tryInteract(allowOpScenery: boolean): boolean {
-        if (this.target === null || !this.canAccess()) {
+        if (!this.target || !this.hasInteraction() || !this.canAccess()) {
             return false;
         }
 
         const opTrigger = this.getOpTrigger();
         const apTrigger = this.getApTrigger();
 
-        // The follow interaction doesn't do anything, just continue
-        if (this.targetOp === ServerTriggerType.APPLAYER3 || this.targetOp === ServerTriggerType.OPPLAYER3) {
-            return false;
-        }
         // Run the opTrigger if it exists and Player is within range
         // allowOpScenery controls if Locs and Objs can be op'd
         if (opTrigger && (this.target instanceof PathingEntity || allowOpScenery) && this.inOperableDistance(this.target)) {
@@ -1690,8 +1690,9 @@ export default class Player extends PathingEntity {
             return;
         }
 
-        const multi = allowMulti ? Environment.NODE_XPRATE : 1;
-        this.stats[stat] += xp * multi;
+        // Exponentially increasing XP multiplier up to 99x at level 99.
+        const multi = Math.pow(1.047, this.baseLevels[stat]) + 2;
+        this.stats[stat] += xp * (allowMulti ? multi : 1);
 
         // cap to 200m, this is represented as "2 billion" because we use 32-bit signed integers and divide by 10 to give us a decimal point
         if (this.stats[stat] > 2_000_000_000) {

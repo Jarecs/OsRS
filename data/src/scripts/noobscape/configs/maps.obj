@@ -1,0 +1,25 @@
+[western_map]
+name=Western map
+desc=A map of the western provinces.
+model=model_2774_obj
+2dxof=-1
+2dyof=56
+2dzoom=990
+2dyan=1716
+2dxan=264
+iop1=Read
+weight=18oz
+cost=1
+
+[karamja_map]
+name=Karamja map
+desc=A map of the island of Karamja.
+model=model_2774_obj
+2dxof=-1
+2dyof=56
+2dzoom=990
+2dyan=1716
+2dxan=264
+iop1=Read
+weight=18oz
+cost=1

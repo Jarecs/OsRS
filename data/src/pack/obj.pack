@@ -597,7 +597,7 @@
 596=torch_unlit
 597=cert_torch_unlit
 598=unlitarrow
-599=obj_599
+599=bankers_note
 600=book_of_astrology
 601=keep_key
 602=lens_mould
@@ -711,7 +711,7 @@
 710=digsitevase
 711=digsitebook
 712=display_tea
-713=obj_713
+713=bone_dissolver
 714=thkaramjamap
 715=thkaramjamapcomp
 716=bullroarer
@@ -1587,7 +1587,7 @@
 1586=misc_key
 1587=cert_misc_key
 1588=grip_keys
-1589=obj_1589
+1589=clue_compass
 1590=dusty_key
 1591=jail_key
 1592=ring_mould
@@ -2418,9 +2418,9 @@
 2417=zamorak_staff
 2418=princeskey
 2419=blondwig
-2420=obj_2420
+2420=western_map
 2421=plainwig
-2422=obj_2422
+2422=karamja_map
 2423=key_print
 2424=skinpaste
 2425=obj_2425

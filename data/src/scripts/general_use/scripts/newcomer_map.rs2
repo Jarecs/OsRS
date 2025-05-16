@@ -13,3 +13,29 @@ if ($mapsquare_x < 46 | $mapsquare_y < 49 | $mapsquare_x > 51 | $mapsquare_y > 5
     %newcomers_pos = calc($mapsquare_x - 46 + ($mapsquare_y - 49) * 6);
 }
 if_openmain(playermap_east);
+
+[if_button,playermap_east:com_41]
+@newcomer_map_teleport(map_findsquare(0_50_50_36_2, 0, 2, ^map_findsquare_lineofwalk));
+
+[if_button,playermap_east:com_42]
+@newcomer_map_teleport(map_findsquare(0_48_51_21_7, 0, 2, ^map_findsquare_lineofwalk));
+
+[if_button,playermap_east:com_43]
+@newcomer_map_teleport(map_findsquare(0_51_52_13_62, 0, 2, ^map_findsquare_lineofwalk));
+
+[if_button,playermap_east:com_44]
+@newcomer_map_teleport(map_findsquare(0_47_52_35_25, 0, 2, ^map_findsquare_lineofwalk));
+
+[if_button,playermap_east:com_46]
+@newcomer_map_teleport(map_findsquare(0_47_50_10_52, 0, 2, ^map_findsquare_lineofwalk));
+
+[label,newcomer_map_teleport](coord $coord)
+if (~wilderness_level(coord) > 1) {
+    mes("A mysterious force blocks your teleport spell!");
+    mes("You can't use this teleport in the wilderness.");
+    return;
+}
+if (~pre_tele_checks(coord) = false) {
+    return;
+}
+~player_teleport_normal($coord);

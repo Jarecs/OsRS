@@ -1,0 +1,13 @@
+[bone_dissolver]
+name=Bone Dissolver
+desc=An artifact that instantly converts dropped bones into prayer experience.
+cost=1
+model=model_2650_obj
+2dyof=-3
+2dzoom=930
+2dyan=1936
+2dxan=120
+weight=3g
+tradeable=no
+iop2=Wield
+wearpos=quiver

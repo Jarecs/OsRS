@@ -1,0 +1,29 @@
+[ai_queue3,monk_of_zamorak_17]
+gosub(npc_death);
+if (npc_findhero = false) {
+    return;
+}
+// Default drop from config.
+obj_add(npc_coord, npc_param(death_drop), 1, ^lootdrop_duration);
+// Always drop a wine of zamorak.
+obj_add(npc_coord, wine_of_zamorak, 1, ^lootdrop_duration);
+
+[ai_queue3,monk_of_zamorak_22]
+gosub(npc_death);
+if (npc_findhero = false) {
+    return;
+}
+// Default drop from config.
+obj_add(npc_coord, npc_param(death_drop), 1, ^lootdrop_duration);
+// Always drop a wine of zamorak.
+obj_add(npc_coord, wine_of_zamorak, 1, ^lootdrop_duration);
+
+[ai_queue3,monk_of_zamorak_45]
+gosub(npc_death);
+if (npc_findhero = false) {
+    return;
+}
+// Default drop from config.
+obj_add(npc_coord, npc_param(death_drop), 1, ^lootdrop_duration);
+// Always drop a wine of zamorak.
+obj_add(npc_coord, wine_of_zamorak, 1, ^lootdrop_duration);

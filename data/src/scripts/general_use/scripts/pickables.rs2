@@ -63,4 +63,14 @@ if(inv_freespace(inv) = 0) {
     mes("You pick some flax.");
     inv_add(inv, flax, 1);
     loc_del(25); // 10t after update
+    queue(flax_repeat, 3);
+}
+
+[queue,flax_repeat]
+loc_findallzone(coord);
+while (loc_findnext = true) {
+    if (loc_type = flax_ground) {
+        p_oploc(2);
+        return;
+    }
 }

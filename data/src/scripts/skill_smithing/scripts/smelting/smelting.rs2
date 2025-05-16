@@ -17,6 +17,9 @@ switch_obj (last_useitem)
 
 //--- this is the code that uses p_delays instead of weakqueues
 [label,smelt_ore](obj $last)
+if (getqueue(smelting_repeat) > 0) {
+    clearqueue(smelting_repeat);
+}
 p_arrivedelay();
 // find the bar that the ore smelts to
 def_namedobj $bar = oc_param($last, smeltsto);
@@ -61,6 +64,7 @@ p_delay(3);
 
 // delete main ore
 inv_del(inv, struct_param($struct, ingredient), struct_param($struct, bar_count));
+queue(smelting_repeat, 3, $last);
 // delete secondary ore
 if (struct_param($struct, ingredient_secondary) ! null) {
     inv_del(inv, struct_param($struct, ingredient_secondary), struct_param($struct, ingredient_secondary_count));
@@ -91,6 +95,17 @@ stat_advance(smithing, $xp);
 inv_add(inv, $bar, 1);
 // display product message
 mes(struct_param($struct, productmessage));
+
+//---queue to repeat smelting.
+[queue,smelting_repeat](obj $last)
+if(inv_total(inv, $last) > 0 & busy2 = false) {
+    def_int $slot = ~inv_find(inv, $last, 0);
+    if ($slot >= 0) {
+        @smelt_ore(inv_getobj(inv, $slot));
+    }
+}
+
+
 //----------------------------
 
 //************* WEAKQUEUES DIDNT EXIST UNTIL SEPT 2004 *************

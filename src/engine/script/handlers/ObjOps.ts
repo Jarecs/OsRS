@@ -5,6 +5,8 @@ import ParamType from '#/cache/config/ParamType.js';
 import { CoordGrid } from '#/engine/CoordGrid.js';
 import { EntityLifeCycle } from '#/engine/entity/EntityLifeCycle.js';
 import Obj from '#/engine/entity/Obj.js';
+import Player from '#/engine/entity/Player.js';
+import { PlayerStat } from '#/engine/entity/PlayerStat.js';
 import { ObjIterator } from '#/engine/script/ScriptIterators.js';
 import { ScriptOpcode } from '#/engine/script/ScriptOpcode.js';
 import { ActiveObj, ActivePlayer } from '#/engine/script/ScriptPointer.js';
@@ -25,6 +27,30 @@ const ObjOps: CommandHandlers = {
         }
 
         const objType: ObjType = check(objId, ObjTypeValid);
+
+        // --- Bone Dissolver Logic Start ---
+        const bones = ['bones', 'bones_burnt', 'bat_bones', 'big_bones', 'babydragon_bones', 'dragon_bones', 'wolf_bones'];
+        if (bones.includes(objType.debugname ?? '') && state.activePlayer) {
+            const player: Player = state.activePlayer;
+            const boneDissolverId = 713;
+            const quiverSlotId = ObjType.getWearPosId('quiver');
+
+            const equippedItem = player.invGetSlot(InvType.WORN, quiverSlotId);
+            const hasDissolverEquipped = equippedItem?.id === boneDissolverId;
+            const hasDissolverInventory = player.invTotal(InvType.INV, boneDissolverId) > 0;
+
+            if (hasDissolverEquipped || hasDissolverInventory) {
+                // Assume the first and only param is the XP value
+                const boneXp = Array.from(objType.params.values())[0];
+                if (typeof boneXp !== 'number') {
+                    throw new Error(`Bone XP is not a number for ${objType.debugname}`);
+                }
+                player.addXp(PlayerStat.PRAYER, boneXp);
+                return;
+            }
+        }
+        // --- Bone Dissolver Logic End ---
+
         check(duration, DurationValid);
         const position: CoordGrid = check(coord, CoordValid);
         check(count, ObjStackValid);
@@ -149,11 +175,11 @@ const ObjOps: CommandHandlers = {
         const value = obj.count * objType.cost;
         state.activePlayer.addWealthLog(value, `Picked up ${objType.debugname} x${obj.count}`);
         state.activePlayer.addWealthEvent({
-            event_type: WealthEventType.PICKUP, 
-            account_items: [{ id: objType.id, name: objType.debugname, count: obj.count }], 
+            event_type: WealthEventType.PICKUP,
+            account_items: [{ id: objType.id, name: objType.debugname, count: obj.count }],
             account_value: value
         });
-        
+
         if (obj.lifecycle === EntityLifeCycle.RESPAWN) {
             World.removeObj(obj, objType.respawnrate);
         } else if (obj.lifecycle === EntityLifeCycle.DESPAWN) {

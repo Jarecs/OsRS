@@ -96,6 +96,18 @@ mes("You bind the temple's power into <db_getfield($data, runecraft_table:name, 
 inv_add(inv, $rune, calc($total_ess * $rune_count_per_ess));
 p_delay(3);
 
+[opheldu,_talismans]
+if (oc_category(last_item) ! category_149) {
+    ~displaymessage(^dm_default);
+    return;
+}
+if (inv_total(inv, last_item) > 1 & inv_freespace(inv) = 0) {
+    mes("You don't have enough room in your inventory.");
+    return;
+}
+def_int $count = min(inv_total(inv, last_item), max(inv_freespace(inv), 1));
+inv_del(inv, last_item, $count);
+inv_add(inv, blankrune, $count);
 
 [opheld4,_talismans]
 def_obj $last_item = last_item;

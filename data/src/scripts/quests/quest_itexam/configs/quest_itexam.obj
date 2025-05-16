@@ -590,7 +590,3 @@ model=model_2468_obj
 weight=150g
 members=yes
 tradeable=no
-
-// rename: cert_display_tea
-[obj_713]
-tradeable=no

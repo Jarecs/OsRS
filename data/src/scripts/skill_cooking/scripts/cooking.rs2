@@ -9,6 +9,9 @@ if(oc_param(last_useitem, unlit_arrow) = ^true) { // might not work on every fir
 }
 
 [label,attempt_cook_item](obj $uncooked_item)
+if (getqueue(cooking_repeat) > 0) {
+    clearqueue(cooking_repeat);
+}
 //not sure if this is used
 p_arrivedelay();
 // get item data from db
@@ -111,8 +114,17 @@ if ($low = 0 & $high = 0) {
 def_namedobj $burnt_item = db_getfield($data,cooking_generic:burnt,0);
 def_namedobj $additional_item = db_getfield($data,cooking_generic:additional,0);
 def_int $experience = db_getfield($data,cooking_generic:experience,0);
+queue(cooking_repeat, 3, $uncooked_item, loc_coord, loc_type);
 @cook_item($passes_roll, $anim, $cookmessage, $succesmessage, $burnmessage, $uncooked_item, $cooked_item, $burnt_item, $additional_item, $experience);
 
+//---queue to repeat cooking.
+[queue,cooking_repeat](obj $uncooked_item, coord $coord, loc $loc)
+if(inv_total(inv, $uncooked_item) > 0 & busy2 = false) {
+    def_int $slot = ~inv_find(inv, $uncooked_item, 0);
+    if ($slot >= 0 & loc_find($coord, $loc) = true) {
+        @attempt_cook_item(inv_getobj(inv, $slot));
+    }
+}
 
 // i put this in a label so its easier to transition to weak queues later on
 [label,cook_item](boolean $passes_roll, seq $anim, string $cookmessage, string $succesmessage, string $burnmessage, obj $uncooked_item, namedobj $cooked_item, namedobj $burnt_item, namedobj $additional_item, int $experience)

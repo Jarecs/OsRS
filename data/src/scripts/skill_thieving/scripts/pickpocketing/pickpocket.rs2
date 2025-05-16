@@ -19,6 +19,9 @@
 [opnpc3,farmer] // Farmer
 @attempt_pick_pocket(npc_type);
 
+[opnpc3,wizard] // Wizard
+@attempt_pick_pocket(npc_type);
+
 [opnpc3,guard_sword] // Guard
 @attempt_pick_pocket(npc_type);
 

@@ -3,6 +3,11 @@ def_int $rolls = calc(4 + random(3));
 def_int $roll = 0;
 def_int $rare = 0;
 
+if (random(3) = 0) {
+    def_namedobj $trail_clue_hard = enum(int, namedobj, trail_hard_enum, random(enum_getoutputcount(trail_hard_enum)));
+    inv_add(trail_rewardinv, $trail_clue_hard, 1);
+}
+
 while ($roll < $rolls) {
     // Rare drop chance was 1/13 in OSRS in 2019. @https://twitter.com/JagexTide/status/1131933683714330624
     // the chances have been scaled down over time to accomodate for more uniques being in the list, there are 25 uniques in May 2004

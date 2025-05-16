@@ -891,10 +891,6 @@ weight=3lb
 members=yes
 tradeable=no
 
-// rename: cert_grip_keys
-[obj_1589]
-tradeable=no
-
 [dusty_key]
 name=Dusty key
 desc=I wonder what this unlocks?
@@ -1082,14 +1078,6 @@ recol1d=7400
 2dyan=1904
 2dxan=120
 members=yes
-tradeable=no
-
-// rename: cert_blondwig
-[obj_2420]
-tradeable=no
-
-// rename: cert_plainwig
-[obj_2422]
 tradeable=no
 
 // rename: cert_skinpaste
