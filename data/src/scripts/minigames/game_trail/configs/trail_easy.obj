@@ -1,5 +1,5 @@
 [trail_clue_easy_map001]
-name=Clue scroll
+name=Clue scroll (easy)
 desc=Part of the world map, but where?
 cost=1
 members=yes
@@ -15,7 +15,7 @@ param=trail_casket,trail_clue_easy_map001_casket
 tradeable=no
 
 [trail_clue_easy_map002]
-name=Clue scroll
+name=Clue scroll (easy)
 desc=Part of the world map, but where?
 cost=1
 members=yes
@@ -31,7 +31,7 @@ param=trail_casket,trail_clue_easy_map002_casket
 tradeable=no
 
 [trail_clue_easy_map003]
-name=Clue scroll
+name=Clue scroll (easy)
 desc=Part of the world map, but where?
 cost=1
 members=yes
@@ -47,7 +47,7 @@ param=trail_casket,trail_clue_easy_map003_casket
 tradeable=no
 
 [trail_clue_easy_simple001]
-name=Clue scroll
+name=Clue scroll (easy)
 desc=A clue!
 cost=1
 members=yes
@@ -63,7 +63,7 @@ param=trail_teleport,1_50_50_9_18
 tradeable=no
 
 [trail_clue_easy_simple002]
-name=Clue scroll
+name=Clue scroll (easy)
 desc=A clue!
 cost=1
 members=yes
@@ -79,7 +79,7 @@ param=trail_teleport,1_50_50_28_16
 tradeable=no
 
 [trail_clue_easy_simple003]
-name=Clue scroll
+name=Clue scroll (easy)
 desc=A clue!
 cost=1
 members=yes
@@ -95,7 +95,7 @@ param=trail_teleport,0_50_50_48_46
 tradeable=no
 
 [trail_clue_easy_simple004]
-name=Clue scroll
+name=Clue scroll (easy)
 desc=A clue!
 cost=1
 members=yes
@@ -111,7 +111,7 @@ param=trail_teleport,1_51_49_37_33
 tradeable=no
 
 [trail_clue_easy_simple005]
-name=Clue scroll
+name=Clue scroll (easy)
 desc=A clue!
 cost=1
 members=yes
@@ -127,7 +127,7 @@ param=trail_teleport,0_50_50_21_19
 tradeable=no
 
 [trail_clue_easy_simple006]
-name=Clue scroll
+name=Clue scroll (easy)
 desc=A clue!
 cost=1
 members=yes
@@ -143,7 +143,7 @@ param=trail_teleport,0_51_50_25_2
 tradeable=no
 
 [trail_clue_easy_simple007]
-name=Clue scroll
+name=Clue scroll (easy)
 desc=A clue!
 cost=1
 members=yes
@@ -159,7 +159,7 @@ param=trail_teleport,0_51_49_23_53
 tradeable=no
 
 [trail_clue_easy_simple008]
-name=Clue scroll
+name=Clue scroll (easy)
 desc=A clue!
 cost=1
 members=yes
@@ -175,7 +175,7 @@ param=trail_teleport,0_51_49_9_55
 tradeable=no
 
 [trail_clue_easy_simple009]
-name=Clue scroll
+name=Clue scroll (easy)
 desc=A clue!
 cost=1
 members=yes
@@ -191,7 +191,7 @@ param=trail_teleport,0_50_52_3_56
 tradeable=no
 
 [trail_clue_easy_simple010]
-name=Clue scroll
+name=Clue scroll (easy)
 desc=A clue!
 cost=1
 members=yes
@@ -207,7 +207,7 @@ param=trail_teleport,0_50_53_22_6
 tradeable=no
 
 [trail_clue_easy_simple011]
-name=Clue scroll
+name=Clue scroll (easy)
 desc=A clue!
 cost=1
 members=yes
@@ -223,7 +223,7 @@ param=trail_teleport,1_50_53_50_28
 tradeable=no
 
 [trail_clue_easy_simple012]
-name=Clue scroll
+name=Clue scroll (easy)
 desc=A clue!
 cost=1
 members=yes
@@ -239,7 +239,7 @@ param=trail_teleport,0_50_53_28_41
 tradeable=no
 
 [trail_clue_easy_simple013]
-name=Clue scroll
+name=Clue scroll (easy)
 desc=A clue!
 cost=1
 members=yes
@@ -255,7 +255,7 @@ param=trail_teleport,0_49_53_20_14
 tradeable=no
 
 [trail_clue_easy_simple014]
-name=Clue scroll
+name=Clue scroll (easy)
 desc=A clue!
 cost=1
 members=yes
@@ -271,7 +271,7 @@ param=trail_teleport,0_48_53_1_38
 tradeable=no
 
 [trail_clue_easy_simple015]
-name=Clue scroll
+name=Clue scroll (easy)
 desc=A clue!
 cost=1
 members=yes
@@ -287,7 +287,7 @@ param=trail_teleport,1_46_52_27_58
 tradeable=no
 
 [trail_clue_easy_simple016]
-name=Clue scroll
+name=Clue scroll (easy)
 desc=A clue!
 cost=1
 members=yes
@@ -303,7 +303,7 @@ param=trail_teleport,0_46_52_11_62
 tradeable=no
 
 [trail_clue_easy_simple017]
-name=Clue scroll
+name=Clue scroll (easy)
 desc=A clue!
 cost=1
 members=yes
@@ -319,7 +319,7 @@ param=trail_teleport,0_46_52_27_13
 tradeable=no
 
 [trail_clue_easy_simple018]
-name=Clue scroll
+name=Clue scroll (easy)
 desc=A clue!
 cost=1
 members=yes
@@ -335,7 +335,7 @@ param=trail_teleport,0_46_51_25_46
 tradeable=no
 
 [trail_clue_easy_simple019]
-name=Clue scroll
+name=Clue scroll (easy)
 desc=A clue!
 cost=1
 members=yes
@@ -351,7 +351,7 @@ param=trail_teleport,0_47_50_4_22
 tradeable=no
 
 [trail_clue_easy_simple020]
-name=Clue scroll
+name=Clue scroll (easy)
 desc=A clue!
 cost=1
 members=yes
@@ -367,7 +367,7 @@ param=trail_teleport,0_47_50_39_57
 tradeable=no
 
 [trail_clue_easy_simple021]
-name=Clue scroll
+name=Clue scroll (easy)
 desc=A clue!
 cost=1
 members=yes
@@ -383,7 +383,7 @@ param=trail_teleport,0_48_50_27_58
 tradeable=no
 
 [trail_clue_easy_simple022]
-name=Clue scroll
+name=Clue scroll (easy)
 desc=A clue!
 cost=1
 members=yes
@@ -399,7 +399,7 @@ param=trail_teleport,0_46_53_8_59
 tradeable=no
 
 [trail_clue_easy_simple023]
-name=Clue scroll
+name=Clue scroll (easy)
 desc=A clue!
 cost=1
 members=yes
@@ -415,7 +415,7 @@ param=trail_teleport,0_45_53_5_58
 tradeable=no
 
 [trail_clue_easy_simple024]
-name=Clue scroll
+name=Clue scroll (easy)
 desc=A clue!
 cost=1
 members=yes
@@ -431,7 +431,7 @@ param=trail_teleport,0_44_53_9_50
 tradeable=no
 
 [trail_clue_easy_simple025]
-name=Clue scroll
+name=Clue scroll (easy)
 desc=A clue!
 cost=1
 members=yes
@@ -447,7 +447,7 @@ param=trail_teleport,0_43_53_51_37
 tradeable=no
 
 [trail_clue_easy_simple026]
-name=Clue scroll
+name=Clue scroll (easy)
 desc=A clue!
 cost=1
 members=yes
@@ -463,7 +463,7 @@ param=trail_teleport,0_43_54_9_45
 tradeable=no
 
 [trail_clue_easy_simple027]
-name=Clue scroll
+name=Clue scroll (easy)
 desc=A clue!
 cost=1
 members=yes
@@ -479,7 +479,7 @@ param=trail_teleport,2_42_54_60_39
 tradeable=no
 
 [trail_clue_easy_simple028]
-name=Clue scroll
+name=Clue scroll (easy)
 desc=A clue!
 cost=1
 members=yes
@@ -495,7 +495,7 @@ param=trail_teleport,0_41_52_21_10
 tradeable=no
 
 [trail_clue_easy_simple029]
-name=Clue scroll
+name=Clue scroll (easy)
 desc=A clue!
 cost=1
 members=yes
@@ -511,7 +511,7 @@ param=trail_teleport,0_41_51_30_35
 tradeable=no
 
 [trail_clue_easy_simple030]
-name=Clue scroll
+name=Clue scroll (easy)
 desc=A clue!
 cost=1
 members=yes
@@ -527,7 +527,7 @@ param=trail_teleport,0_40_51_55_27
 tradeable=no
 
 [trail_clue_easy_simple031]
-name=Clue scroll
+name=Clue scroll (easy)
 desc=A clue!
 cost=1
 members=yes
@@ -543,7 +543,7 @@ param=trail_teleport,0_40_52_57_19
 tradeable=no
 
 [trail_clue_easy_vague001]
-name=Clue scroll
+name=Clue scroll (easy)
 desc=A clue!
 cost=1
 members=yes
@@ -559,7 +559,7 @@ param=trail_teleport,1_50_53_6_27
 tradeable=no
 
 [trail_clue_easy_vague002]
-name=Clue scroll
+name=Clue scroll (easy)
 desc=A clue!
 cost=1
 members=yes
@@ -575,7 +575,7 @@ param=trail_teleport,0_50_53_26_60
 tradeable=no
 
 [trail_clue_easy_vague003]
-name=Clue scroll
+name=Clue scroll (easy)
 desc=A clue!
 cost=1
 members=yes
@@ -591,7 +591,7 @@ param=trail_teleport,1_40_51_14_62
 tradeable=no
 
 [trail_clue_easy_vague004]
-name=Clue scroll
+name=Clue scroll (easy)
 desc=A clue!
 cost=1
 members=yes
@@ -607,7 +607,7 @@ param=trail_teleport,1_40_51_52_40
 tradeable=no
 
 [trail_clue_easy_vague005]
-name=Clue scroll
+name=Clue scroll (easy)
 desc=A clue!
 cost=1
 members=yes

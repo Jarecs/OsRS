@@ -1,5 +1,5 @@
 [trail_clue_medium_map001]
-name=Clue scroll
+name=Clue scroll (medium)
 desc=Part of the world map, but where?
 cost=1
 members=yes
@@ -16,7 +16,7 @@ tradeable=no
 
 // this clue is unobtainable!
 [trail_clue_medium_map002]
-name=Clue scroll
+name=Clue scroll (medium)
 desc=Part of the world map, but where?
 cost=1
 members=yes
@@ -32,7 +32,7 @@ param=trail_casket,trail_clue_medium_map002_casket
 tradeable=no
 
 [trail_clue_medium_sextant001]
-name=Clue scroll
+name=Clue scroll (medium)
 desc=Perhaps someone at the observatory can teach me to navigate?
 cost=1
 members=yes
@@ -50,7 +50,7 @@ param=trail_casket,trail_clue_medium_sextant001_casket
 tradeable=no
 
 [trail_clue_medium_sextant002]
-name=Clue scroll
+name=Clue scroll (medium)
 desc=Perhaps someone at the observatory can teach me to navigate?
 cost=1
 members=yes
@@ -68,7 +68,7 @@ param=trail_casket,trail_clue_medium_sextant002_casket
 tradeable=no
 
 [trail_clue_medium_sextant003]
-name=Clue scroll
+name=Clue scroll (medium)
 desc=Perhaps someone at the observatory can teach me to navigate?
 cost=1
 members=yes
@@ -86,7 +86,7 @@ param=trail_casket,trail_clue_medium_sextant003_casket
 tradeable=no
 
 [trail_clue_medium_sextant004]
-name=Clue scroll
+name=Clue scroll (medium)
 desc=Perhaps someone at the observatory can teach me to navigate?
 cost=1
 members=yes
@@ -104,7 +104,7 @@ param=trail_casket,trail_clue_medium_sextant004_casket
 tradeable=no
 
 [trail_clue_medium_sextant005]
-name=Clue scroll
+name=Clue scroll (medium)
 desc=Perhaps someone at the observatory can teach me to navigate?
 cost=1
 members=yes
@@ -122,7 +122,7 @@ param=trail_casket,trail_clue_medium_sextant005_casket
 tradeable=no
 
 [trail_clue_medium_sextant006]
-name=Clue scroll
+name=Clue scroll (medium)
 desc=Perhaps someone at the observatory can teach me to navigate?
 cost=1
 members=yes
@@ -140,7 +140,7 @@ param=trail_casket,trail_clue_medium_sextant006_casket
 tradeable=no
 
 [trail_clue_medium_sextant007]
-name=Clue scroll
+name=Clue scroll (medium)
 desc=Perhaps someone at the observatory can teach me to navigate?
 cost=1
 members=yes
@@ -158,7 +158,7 @@ param=trail_casket,trail_clue_medium_sextant007_casket
 tradeable=no
 
 [trail_clue_medium_sextant008]
-name=Clue scroll
+name=Clue scroll (medium)
 desc=Perhaps someone at the observatory can teach me to navigate?
 cost=1
 members=yes
@@ -176,7 +176,7 @@ param=trail_casket,trail_clue_medium_sextant008_casket
 tradeable=no
 
 [trail_clue_medium_sextant009]
-name=Clue scroll
+name=Clue scroll (medium)
 desc=Perhaps someone at the observatory can teach me to navigate?
 cost=1
 members=yes
@@ -194,7 +194,7 @@ param=trail_casket,trail_clue_medium_sextant009_casket
 tradeable=no
 
 [trail_clue_medium_sextant010]
-name=Clue scroll
+name=Clue scroll (medium)
 desc=Perhaps someone at the observatory can teach me to navigate?
 cost=1
 members=yes
@@ -212,7 +212,7 @@ param=trail_casket,trail_clue_medium_sextant010_casket
 tradeable=no
 
 [trail_clue_medium_sextant011]
-name=Clue scroll
+name=Clue scroll (medium)
 desc=Perhaps someone at the observatory can teach me to navigate?
 cost=1
 members=yes
@@ -230,7 +230,7 @@ param=trail_casket,trail_clue_medium_sextant011_casket
 tradeable=no
 
 [trail_clue_medium_sextant012]
-name=Clue scroll
+name=Clue scroll (medium)
 desc=Perhaps someone at the observatory can teach me to navigate?
 cost=1
 members=yes
@@ -248,7 +248,7 @@ param=trail_casket,trail_clue_medium_sextant012_casket
 tradeable=no
 
 [trail_clue_medium_sextant013]
-name=Clue scroll
+name=Clue scroll (medium)
 desc=Perhaps someone at the observatory can teach me to navigate?
 cost=1
 members=yes
@@ -266,7 +266,7 @@ param=trail_casket,trail_clue_medium_sextant013_casket
 tradeable=no
 
 [trail_clue_medium_riddle001]
-name=Clue scroll
+name=Clue scroll (medium)
 desc=A clue!
 cost=1
 members=yes
@@ -283,7 +283,7 @@ param=trail_key,trail_clue_medium_riddle001_key
 param=trail_teleport,0_50_54_56_31
 
 [trail_clue_medium_riddle002]
-name=Clue scroll
+name=Clue scroll (medium)
 desc=A clue!
 cost=1
 members=yes
@@ -301,7 +301,7 @@ param=trail_teleport,1_40_51_14_62
 tradeable=no
 
 [trail_clue_medium_riddle003]
-name=Clue scroll
+name=Clue scroll (medium)
 desc=A clue!
 cost=1
 members=yes
@@ -319,7 +319,7 @@ param=trail_teleport,1_40_51_51_60
 tradeable=no
 
 [trail_clue_medium_riddle004]
-name=Clue scroll
+name=Clue scroll (medium)
 desc=A clue!
 cost=1
 members=yes
@@ -337,7 +337,7 @@ param=trail_teleport,0_42_54_21_22
 tradeable=no
 
 [trail_clue_medium_riddle005]
-name=Clue scroll
+name=Clue scroll (medium)
 desc=A clue!
 cost=1
 members=yes
@@ -355,7 +355,7 @@ param=trail_teleport,1_40_48_33_36
 tradeable=no
 
 [trail_clue_medium_anagram001]
-name=Clue scroll
+name=Clue scroll (medium)
 desc=A clue!
 cost=1
 members=yes
@@ -371,7 +371,7 @@ param=trail_coord,1_41_48_53_14
 tradeable=no
 
 [trail_clue_medium_anagram002]
-name=Clue scroll
+name=Clue scroll (medium)
 desc=A clue!
 cost=1
 members=yes
@@ -387,7 +387,7 @@ param=trail_coord,0_50_50_8_14
 tradeable=no
 
 [trail_clue_medium_anagram003]
-name=Clue scroll
+name=Clue scroll (medium)
 desc=A clue!
 cost=1
 members=yes
@@ -403,7 +403,7 @@ param=trail_coord,0_40_51_44_21
 tradeable=no
 
 [trail_clue_medium_anagram004]
-name=Clue scroll
+name=Clue scroll (medium)
 desc=A clue!
 cost=1
 members=yes
@@ -419,7 +419,7 @@ param=trail_coord,0_50_53_32_33
 tradeable=no
 
 [trail_clue_medium_anagram005]
-name=Clue scroll
+name=Clue scroll (medium)
 desc=A clue!
 cost=1
 members=yes
@@ -435,7 +435,7 @@ param=trail_coord,0_43_50_26_15
 tradeable=no
 
 [trail_clue_medium_anagram006]
-name=Clue scroll
+name=Clue scroll (medium)
 desc=A clue!
 cost=1
 members=yes
@@ -452,7 +452,7 @@ param=trail_coord,0_51_49_9_44
 tradeable=no
 
 [trail_clue_medium_anagram007]
-name=Clue scroll
+name=Clue scroll (medium)
 desc=A clue!
 cost=1
 members=yes
@@ -468,7 +468,7 @@ param=trail_coord,0_47_54_5_44
 tradeable=no
 
 [trail_clue_medium_anagram008]
-name=Clue scroll
+name=Clue scroll (medium)
 desc=A clue!
 cost=1
 members=yes
@@ -484,7 +484,7 @@ param=trail_coord,0_37_54_13_32
 tradeable=no
 
 [trail_clue_medium_anagram009]
-name=Clue scroll
+name=Clue scroll (medium)
 desc=A clue!
 cost=1
 members=yes
@@ -500,7 +500,7 @@ param=trail_coord,1_42_55_57_56
 tradeable=no
 
 [trail_clue_medium_anagram010]
-name=Clue scroll
+name=Clue scroll (medium)
 desc=A clue!
 cost=1
 members=yes
@@ -516,7 +516,7 @@ param=trail_coord,0_42_54_49_16
 tradeable=no
 
 [trail_clue_medium_anagram011]
-name=Clue scroll
+name=Clue scroll (medium)
 desc=A clue!
 cost=1
 members=yes
@@ -532,7 +532,7 @@ param=trail_coord,0_39_49_46_33
 tradeable=no
 
 [trail_clue_medium_anagram012]
-name=Clue scroll
+name=Clue scroll (medium)
 desc=A clue!
 cost=1
 members=yes
