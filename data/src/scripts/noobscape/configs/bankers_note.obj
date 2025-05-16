@@ -3,7 +3,6 @@ name=Banker's Note
 desc=A mystical note that can consolidate items.
 cost=1
 tradeable=no
-iop5=Send to Bank
 model=model_2600_obj
 2dxof=1
 2dyof=7

@@ -1,20 +1,3 @@
-[opheld5,bankers_note]
-    // Check if player has space in bank for 1 item (the note itself)
-    if (inv_freespace(bank) < 1 & inv_total(bank, bankers_note) = 0) {
-        mes("Your bank is full.");
-        return;
-    }
-    // Check if bank already has max stack of notes (if stackable, though it shouldn't be)
-    if (inv_total(bank, bankers_note) = ^max_32bit_int) {
-        mes("Your bank already holds the maximum number of Banker's Notes.");
-        return;
-    }
-    // Move the note from inventory to bank
-    inv_moveitem(inv, bank, bankers_note, 1); // Move 1 note
-    mes("You send the Banker's Note to your bank.");
-
-// --- Item Use Logic ---
-
 [opheldu,bankers_note]
 
 def_obj $item_to_process;
@@ -49,6 +32,10 @@ if ($noted_version = $unnoted_version) {
 
 if ($item_to_process = $unnoted_version) {
     inv_moveitem_cert(inv, inv, $unnoted_version, 1);
+
+    while(inv_total(inv, $unnoted_version) > 0) {
+        inv_moveitem_cert(inv, inv, $unnoted_version, 1);
+    }
     return;
 }
 
@@ -58,6 +45,16 @@ if ($item_to_process = $noted_version) {
         return;
     }
 
-    inv_moveitem_uncert(inv, inv, $noted_version, 1);
+    if (inv_total(inv, $noted_version) = calc(inv_freespace(inv) + 1)) {
+        inv_moveitem_uncert(inv, inv, $noted_version, inv_total(inv, $noted_version));
+        return;
+    }
+
+    if (inv_freespace(inv) < inv_total(inv, $noted_version)) {
+        inv_moveitem_uncert(inv, inv, $noted_version, inv_freespace(inv));
+        return;
+    }
+
+    inv_moveitem_uncert(inv, inv, $noted_version, inv_total(inv, $noted_version));
     return;
 }
