@@ -43,7 +43,7 @@ inv_setslot(trail_puzzleinv, 21, trail_slidingpuzzleb22, 1);
 inv_setslot(trail_puzzleinv, 22, trail_slidingpuzzleb23, 1);
 inv_setslot(trail_puzzleinv, 23, trail_slidingpuzzleb24, 1);
 
-~shuffle_trail_puzzle;
+// ~shuffle_trail_puzzle;
 
 // This achieves randomization by essentially simulating 101 moves using the adj slot to each piece starting from the bottom right
 // (since the puzzle is init'd in a completed state: https://x.com/JagexAsh/status/1301202083845201921)
