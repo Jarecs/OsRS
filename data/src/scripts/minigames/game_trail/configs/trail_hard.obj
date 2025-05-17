@@ -1,5 +1,5 @@
 [trail_clue_hard_map001]
-name=Clue scroll
+name=Clue scroll (hard)
 desc=Part of the world map, but where?
 cost=1
 members=yes
@@ -14,7 +14,7 @@ param=trail_coord,0_51_54_45_47
 tradeable=no
 
 [trail_clue_hard_sextant001]
-name=Clue scroll
+name=Clue scroll (hard)
 desc=Perhaps someone at the observatory can teach me to navigate?
 cost=1
 members=yes
@@ -33,7 +33,7 @@ param=trail_guardian,zamorak_wizard
 tradeable=no
 
 [trail_clue_hard_sextant002]
-name=Clue scroll
+name=Clue scroll (hard)
 desc=Perhaps someone at the observatory can teach me to navigate?
 cost=1
 members=yes
@@ -52,7 +52,7 @@ param=trail_guardian,zamorak_wizard
 tradeable=no
 
 [trail_clue_hard_sextant003]
-name=Clue scroll
+name=Clue scroll (hard)
 desc=Perhaps someone at the observatory can teach me to navigate?
 cost=1
 members=yes
@@ -71,7 +71,7 @@ param=trail_guardian,zamorak_wizard
 tradeable=no
 
 [trail_clue_hard_sextant004]
-name=Clue scroll
+name=Clue scroll (hard)
 desc=Perhaps someone at the observatory can teach me to navigate?
 cost=1
 members=yes
@@ -90,7 +90,7 @@ param=trail_guardian,zamorak_wizard
 tradeable=no
 
 [trail_clue_hard_sextant005]
-name=Clue scroll
+name=Clue scroll (hard)
 desc=Perhaps someone at the observatory can teach me to navigate?
 cost=1
 members=yes
@@ -109,7 +109,7 @@ param=trail_guardian,zamorak_wizard
 tradeable=no
 
 [trail_clue_hard_sextant006]
-name=Clue scroll
+name=Clue scroll (hard)
 desc=Perhaps someone at the observatory can teach me to navigate?
 cost=1
 members=yes
@@ -128,7 +128,7 @@ param=trail_guardian,zamorak_wizard
 tradeable=no
 
 [trail_clue_hard_sextant007]
-name=Clue scroll
+name=Clue scroll (hard)
 desc=Perhaps someone at the observatory can teach me to navigate?
 cost=1
 members=yes
@@ -147,7 +147,7 @@ param=trail_guardian,zamorak_wizard
 tradeable=no
 
 [trail_clue_hard_sextant008]
-name=Clue scroll
+name=Clue scroll (hard)
 desc=Perhaps someone at the observatory can teach me to navigate?
 cost=1
 members=yes
@@ -166,7 +166,7 @@ param=trail_guardian,zamorak_wizard
 tradeable=no
 
 [trail_clue_hard_sextant009]
-name=Clue scroll
+name=Clue scroll (hard)
 desc=Perhaps someone at the observatory can teach me to navigate?
 cost=1
 members=yes
@@ -185,7 +185,7 @@ param=trail_guardian,zamorak_wizard
 tradeable=no
 
 [trail_clue_hard_sextant010]
-name=Clue scroll
+name=Clue scroll (hard)
 desc=Perhaps someone at the observatory can teach me to navigate?
 cost=1
 members=yes
@@ -204,7 +204,7 @@ param=trail_guardian,zamorak_wizard
 tradeable=no
 
 [trail_clue_hard_sextant011]
-name=Clue scroll
+name=Clue scroll (hard)
 desc=Perhaps someone at the observatory can teach me to navigate?
 cost=1
 members=yes
@@ -223,7 +223,7 @@ param=trail_guardian,zamorak_wizard
 tradeable=no
 
 [trail_clue_hard_sextant012]
-name=Clue scroll
+name=Clue scroll (hard)
 desc=Perhaps someone at the observatory can teach me to navigate?
 cost=1
 members=yes
@@ -242,7 +242,7 @@ param=trail_guardian,zamorak_wizard
 tradeable=no
 
 [trail_clue_hard_sextant013]
-name=Clue scroll
+name=Clue scroll (hard)
 desc=Perhaps someone at the observatory can teach me to navigate?
 cost=1
 members=yes
@@ -261,7 +261,7 @@ param=trail_guardian,zamorak_wizard
 tradeable=no
 
 [trail_clue_hard_riddle001]
-name=Clue scroll
+name=Clue scroll (hard)
 desc=A clue!
 cost=1
 members=yes
@@ -277,7 +277,7 @@ param=trail_coord,0_50_150_19_17
 tradeable=no
 
 [trail_clue_hard_riddle002]
-name=Clue scroll
+name=Clue scroll (hard)
 desc=A clue!
 cost=1
 members=yes
@@ -294,7 +294,7 @@ param=trail_coord,0_48_54_17_12
 tradeable=no
 
 [trail_clue_hard_riddle003]
-name=Clue scroll
+name=Clue scroll (hard)
 desc=A clue!
 cost=1
 members=yes
@@ -312,7 +312,7 @@ param=trail_coord,0_49_153_55_33
 tradeable=no
 
 [trail_clue_hard_riddle004]
-name=Clue scroll
+name=Clue scroll (hard)
 desc=A clue!
 cost=1
 members=yes
@@ -329,7 +329,7 @@ param=trail_coord,0_47_50_6_24
 tradeable=no
 
 [trail_clue_hard_riddle005]
-name=Clue scroll
+name=Clue scroll (hard)
 desc=A clue!
 cost=1
 members=yes
@@ -346,7 +346,7 @@ param=trail_coord,0_48_50_13_55
 tradeable=no
 
 [trail_clue_hard_riddle006]
-name=Clue scroll
+name=Clue scroll (hard)
 desc=A clue!
 cost=1
 members=yes
@@ -362,7 +362,7 @@ param=trail_coord,1_50_50_13_16
 tradeable=no
 
 [trail_clue_hard_riddle007]
-name=Clue scroll
+name=Clue scroll (hard)
 desc=A clue!
 cost=1
 members=yes
@@ -379,7 +379,7 @@ param=trail_coord,0_40_51_39_3
 tradeable=no
 
 [trail_clue_hard_riddle008]
-name=Clue scroll
+name=Clue scroll (hard)
 desc=A clue!
 cost=1
 members=yes
@@ -395,7 +395,7 @@ param=trail_coord,2_49_51_30_45
 tradeable=no
 
 [trail_clue_hard_riddle009]
-name=Clue scroll
+name=Clue scroll (hard)
 desc=A clue!
 cost=1
 members=yes
@@ -412,7 +412,7 @@ param=trail_coord,0_49_57_38_15
 tradeable=no
 
 [trail_clue_hard_riddle010]
-name=Clue scroll
+name=Clue scroll (hard)
 desc=A clue!
 cost=1
 members=yes
@@ -429,7 +429,7 @@ param=trail_coord,0_49_60_34_45
 tradeable=no
 
 [trail_clue_hard_riddle011]
-name=Clue scroll
+name=Clue scroll (hard)
 desc=A clue!
 cost=1
 members=yes
@@ -446,7 +446,7 @@ param=trail_casket,trail_clue_hard_riddle011_casket
 tradeable=no
 
 [trail_clue_hard_riddle012]
-name=Clue scroll
+name=Clue scroll (hard)
 desc=A clue!
 cost=1
 members=yes
@@ -462,7 +462,7 @@ param=trail_teleport,0_50_50_21_19
 tradeable=no
 
 [trail_clue_hard_riddle013]
-name=Clue scroll
+name=Clue scroll (hard)
 desc=A clue!
 cost=1
 members=yes
@@ -479,7 +479,7 @@ param=trail_teleport,0_47_54_50_27
 tradeable=no
 
 [trail_clue_hard_riddle014]
-name=Clue scroll
+name=Clue scroll (hard)
 desc=A clue!
 cost=1
 members=yes
@@ -495,7 +495,7 @@ param=trail_teleport,0_47_54_61_61
 tradeable=no
 
 [trail_clue_hard_riddle015]
-name=Clue scroll
+name=Clue scroll (hard)
 desc=A clue!
 cost=1
 members=yes
@@ -511,7 +511,7 @@ param=trail_teleport,0_50_54_4_16
 tradeable=no
 
 [trail_clue_hard_riddle016]
-name=Clue scroll
+name=Clue scroll (hard)
 desc=A clue!
 cost=1
 members=yes
@@ -527,7 +527,7 @@ param=trail_teleport,0_50_53_18_41
 tradeable=no
 
 [trail_clue_hard_riddle017]
-name=Clue scroll
+name=Clue scroll (hard)
 desc=A clue!
 cost=1
 members=yes

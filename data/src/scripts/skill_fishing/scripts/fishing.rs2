@@ -50,6 +50,10 @@ if ($fish2 ! null) { // if fish2 isnt null and roll for 2nd fish passes
             // delete bait
             inv_del(inv, $bait, 1);
         }
+        // roll for clue
+        ~trail_hardcluedrop(128, coord);
+        ~trail_mediumcluedrop(128, coord);
+        ~trail_easycluedrop(128, coord);
         // give fish and display message
         inv_add(inv, $fish2, 1);
         stat_advance(fishing, struct_param($struct2, productexp));
@@ -64,6 +68,10 @@ if ($fish1 ! null) { // else if fish1 isnt null and roll for 1st fish passes
             // delete bait
             inv_del(inv, $bait, 1);
         }
+        // roll for clue
+        ~trail_hardcluedrop(128, coord);
+        ~trail_mediumcluedrop(128, coord);
+        ~trail_easycluedrop(128, coord);
         // give fish and display message
         inv_add(inv, $fish1, 1);
         stat_advance(fishing, struct_param($struct1, productexp));
@@ -80,6 +88,10 @@ if ($fish2 ! null) { // if fish2 isnt null and roll for 2nd fish passes
             // delete bait
             inv_del(inv, $bait, 1);
         }
+        // roll for clue
+        ~trail_hardcluedrop(128, coord);
+        ~trail_mediumcluedrop(128, coord);
+        ~trail_easycluedrop(128, coord);
         // give fish and display message
         inv_add(inv, $fish2, 1);
         stat_advance(fishing, struct_param($struct2, productexp));
@@ -94,6 +106,10 @@ if ($fish1 ! null) { // else if fish1 isnt null and roll for 1st fish passes
             // delete bait
             inv_del(inv, $bait, 1);
         }
+        // roll for clue
+        ~trail_hardcluedrop(128, coord);
+        ~trail_mediumcluedrop(128, coord);
+        ~trail_easycluedrop(128, coord);
         // give fish and display message
         inv_add(inv, $fish1, 1);
         stat_advance(fishing, struct_param($struct1, productexp));

@@ -52,8 +52,8 @@ if ($has_unlocks = false) {
 }
 midi_jingle($jingle, $jingle_millis);
 
-// Skip the level up screen below level 25 if there are no unlocks.
-if ($level < 25 & $has_unlocks = false) {
+// Skip the level up screen if there are no unlocks.
+if ($level ! 99 & $has_unlocks = false) {
     return;
 }
 // the level up dialogue box
